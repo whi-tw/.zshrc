@@ -2,23 +2,13 @@ alias rm="rm -v"
 alias cp="cp -v"
 alias mv="mv -v"
 
-function pull_config {
+function config {
     REPOS=("${HOME}/.zshrc.d" "${HOME}/.password-store")
     for repo in "${REPOS[@]}"
     do
         pushd "${repo}"
-        git pull --rebase
+        git "${@}"
         popd
     done
-    yadm pull --rebase
-}
-function push_config {
-    REPOS=("${HOME}/.zshrc.d" "${HOME}/.password-store")
-    for repo in "${REPOS[@]}"
-    do
-        pushd "${repo}"
-        git push
-        popd
-    done
-    yadm push
+    yadm "${@}"
 }

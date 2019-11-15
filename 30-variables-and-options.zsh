@@ -12,7 +12,6 @@ setopt auto_pushd
 setopt hash_list_all            # Hash everything before completion
 setopt completealiases          # Complete alisases
 setopt always_to_end            # When completing from the middle of a word, move the cursor to the end of the word
-setopt correct                  # Spelling correction for commands
 setopt list_ambiguous           # Complete as much of a completion until it gets ambiguous.
 setopt append_history
 setopt auto_menu
@@ -25,8 +24,6 @@ setopt chase_links              # Resolve symlinks
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-# CASE_SENSITIVE="true"
 
 # History
 export HISTFILE="$HOME/.zsh_history"

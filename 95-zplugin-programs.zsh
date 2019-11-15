@@ -17,3 +17,6 @@ zplugin light alphagov/gds-cli
 zplugin ice from"github" as"program" mv"mykman -> ykman" \
     pick"ykman"
 zplugin light whi-tw/mykman
+
+zplugin ice from"github" as"program" pick"yadm"
+zplugin light TheLocehiliosan/yadm

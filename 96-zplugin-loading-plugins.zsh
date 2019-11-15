@@ -42,6 +42,4 @@ zplugin ice atclone'brew install thefuck && thefuck --alias >  zhook.zsh' atpull
      src"zhook.zsh"
 zplugin light nvbn/thefuck
 
-# zplugin ice atclone'thefuck --alias >  zhook.zsh' atpull'%atclone'\
-#      src"zhook.zsh"
-# zplugin light nvbn/thefuck
+zplugin light "chrissicool/zsh-256color"

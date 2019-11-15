@@ -5,9 +5,9 @@ test ! -d ~/.zplugin/bin && git clone https://github.com/zdharma/zplugin.git ~/.
 #
 # Source files
 #
+# Source local common environment variables
+[ -f "${HOME}"/.env ] && source "${HOME}"/.env
+
 for f in "${HOME}"/.zshrc.d/*.zsh; do
   source "${f}"
 done
-
-# Source local common environment variables
-[ -f "${HOME}"/.env ] && source "${HOME}"/.env

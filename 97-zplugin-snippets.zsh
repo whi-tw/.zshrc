@@ -1,14 +1,10 @@
 #
 # Zplugin Snippets
 #
-# zplugin ice wait"0" lucid
-# zplugin snippet OMZ::lib/git.zsh
 zplugin ice wait"0" lucid
 zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 zplugin ice wait"0" lucid
 zplugin snippet OMZ::plugins/gpg-agent/gpg-agent.plugin.zsh
-# zplugin ice wait"0" atload"unalias grv" lucid
-# zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
 # Setup fasd with caching from PZT module
 # Requirement: Install fasd for this to work

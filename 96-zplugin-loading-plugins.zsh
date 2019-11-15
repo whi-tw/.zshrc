@@ -27,6 +27,14 @@ zplugin ice from"gh-r" as"program" mv"direnv* -> direnv" \
     pick"direnv" src"zhook.zsh"
 zplugin light direnv/direnv
 
+zplugin ice as"program" from"${GITHUB_USERNAME}@github.com"  mv"gds* -> gds" \
+    pick"gds" make"gds"
+zplugin light alphagov/gds-cli
+
+zplugin ice from"github" as"program" mv"mykman -> ykman" \
+    pick"ykman"
+zplugin light whi-tw/mykman
+
 zplugin ice atclone'brew install thefuck && thefuck --alias >  zhook.zsh' atpull'%atclone'\
      src"zhook.zsh"
 zplugin light nvbn/thefuck

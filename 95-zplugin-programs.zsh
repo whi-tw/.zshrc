@@ -10,7 +10,7 @@ zplugin ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
     pick"direnv" src"zhook.zsh"
 zplugin light direnv/direnv
 
-zplugin ice as"program" from"${GITHUB_USERNAME}@github.com"  mv"gds* -> gds" \
+zplugin ice as"program" from"whi-tw@github.com"  mv"gds* -> gds" \
     pick"gds" make"gds"
 zplugin light alphagov/gds-cli
 

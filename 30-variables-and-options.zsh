@@ -22,7 +22,11 @@ setopt hist_reduce_blanks       # Trim blanks
 setopt inc_append_history
 setopt chase_links              # Resolve symlinks
 
-CASE_SENSITIVE="true"
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# CASE_SENSITIVE="true"
 
 # History
 export HISTFILE="$HOME/.zsh_history"

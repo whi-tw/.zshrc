@@ -9,6 +9,9 @@ zplugin ice atclone"gdircolors -b LS_COLORS > clrs.zsh" atpull'%atclone' pick"cl
 zplugin load trapd00r/LS_COLORS
 alias ls='gls --color=always'   # To enable the coloring on ls
 
+zstyle ':completion:*:default' list-colors \
+       ${(s.:.)LS_COLORS} # To enable the coloring on completion
+
 # Dependent installation of fzf to work
 # Check above for better interactive cd utility function
 zplugin light changyuheng/zsh-interactive-cd

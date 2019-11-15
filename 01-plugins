@@ -37,11 +37,11 @@ zplug "plugins/vagrant",           from:oh-my-zsh, if:"(( $+commands[vagrant] ))
 # zsh-users misc
 zplug 'zsh-users/zsh-history-substring-search'
 zplug 'zsh-users/zsh-completions'
-zplug 'zsh-users/zsh-autosuggestions'
+zplugin light 'zsh-users/zsh-autosuggestions'
 
 # misc
 zplug "chrissicool/zsh-256color"
-zplug "zdharma/fast-syntax-highlighting"
+zplugin light "zdharma/fast-syntax-highlighting"
 
 # zsh-syntax-highlighting must be loaded after executing compinit command
 # and sourcing other plugins

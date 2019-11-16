@@ -7,7 +7,7 @@
 zplugin ice wait"0" blockf lucid
 zplugin light zsh-users/zsh-completions
 # docker
-zplugin ice as"completion"
+zplugin ice as"completion" if'[[ -n "$commands[docker]" ]]'
 zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
 # Syntax Highlighting (should always be at the end)

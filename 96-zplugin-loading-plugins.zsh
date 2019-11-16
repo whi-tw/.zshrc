@@ -38,3 +38,5 @@ zplugin ice wait'1' lucid
 zplugin light laggardkernel/zsh-thefuck
 
 zplugin light "chrissicool/zsh-256color"
+
+zplugin light peterhurford/git-it-on.zsh

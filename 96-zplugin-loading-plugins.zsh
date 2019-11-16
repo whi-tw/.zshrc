@@ -2,7 +2,6 @@
 # Zplugin Loading plugins
 #
 
-zplugin ice wait'0' lucid
 zplugin light zdharma/z-p-submods
 
 if  [[ -n "$commands[gdircolors]" ]]

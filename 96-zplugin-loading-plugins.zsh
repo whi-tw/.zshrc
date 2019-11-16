@@ -29,7 +29,7 @@ zplugin ice wait'0' atload'_zsh_autosuggest_start' lucid
 zplugin light zsh-users/zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
-zplugin ice wait'1' lucid atclone"./libexec/pyenv init - > zpyenv.zsh" \
+zplugin ice wait'1' lucid atclone"./libexec/pyenv init -> zpyenv.zsh" \
     atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
     as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
 zplugin light pyenv/pyenv

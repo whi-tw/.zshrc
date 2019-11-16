@@ -7,6 +7,9 @@ theme_default() {
   SPACESHIP_DOTNET_SHOW=false
   SPACESHIP_RUST_SHOW=false
   SPACESHIP_PHP_SHOW=false
+  SPACESHIP_CHAR_SYMBOL="$ "
+  SPACESHIP_CHAR_SYMBOL_SECONDARY="❯ "
+  SPACESHIP_CHAR_SYMBOL_ROOT="# "
 }
 
 # Configures the spaceship prompt

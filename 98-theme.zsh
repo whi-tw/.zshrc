@@ -1,7 +1,26 @@
+# spaceship theme settings
+theme_default() {
+  SPACESHIP_DOCKER_SHOW=false
+  SPACESHIP_NODE_SHOW=false
+  SPACESHIP_KUBECONTEXT_SHOW=false
+  SPACESHIP_CONDA_SHOW=false
+  SPACESHIP_DOTNET_SHOW=false
+  SPACESHIP_RUST_SHOW=false
+  SPACESHIP_PHP_SHOW=false
+}
+
+# Configures the spaceship prompt
+config_spaceship_prompt() {
+    theme_default
+}
+
 #
 # Themes and settings
 #
-zplugin ice from"gh-r" as"program" \
-  atclone'./starship init zsh --print-full-init > zhook.zsh' atpull'%atclone' \
-  pick"direnv" src"zhook.zsh"
-zplugin light starship/starship
+
+zplugin env-whitelist 'SPACESHIP_*'
+
+# Powerlevel10k theme
+# Load custom `config_spaceship_prompt` function above
+zplugin ice atinit"config_spaceship_prompt"
+zplugin light denysdovhan/spaceship-prompt

@@ -9,7 +9,7 @@ zplugin ice wait'1' lucid \
     atclone"gdircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh"
 zplugin light trapd00r/LS_COLORS
-alias ls='gls --color=always'   # To enable the coloring on ls
+test -n "$commands[gls]" && alias ls='gls --color=always'   # To enable the coloring on ls on macos
 
 zstyle ':completion:*:default' list-colors \
     ${(s.:.)LS_COLORS} # To enable the coloring on completion

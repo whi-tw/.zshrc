@@ -11,7 +11,7 @@ zplugin ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
 zplugin light direnv/direnv
 
 zplugin ice as"program" from"whi-tw@github.com"  mv"gds* -> gds" \
-    pick"gds" make"gds"
+    pick"gds" make"gds" if'[[ -n "$commands[go]" ]]'
 zplugin light alphagov/gds-cli
 
 zplugin ice from"github" as"program" mv"mykman -> ykman" \

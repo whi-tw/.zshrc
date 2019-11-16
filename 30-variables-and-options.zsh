@@ -20,6 +20,8 @@ setopt hist_ignore_dups         # Ignore consecutive duplicates.
 setopt hist_reduce_blanks       # Trim blanks
 setopt inc_append_history
 setopt chase_links              # Resolve symlinks
+autoload bashcompinit
+bashcompinit
 
 
 zstyle ':completion:*' menu select

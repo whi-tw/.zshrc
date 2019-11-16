@@ -11,5 +11,5 @@ zplugin ice as"completion" if'[[ -n "$commands[docker]" ]]'
 zplugin snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
 # Syntax Highlighting (should always be at the end)
-zplugin ice wait"0" atinit"zpcompinit; zpcdreplay" lucid
+zplugin ice wait"0" atinit"zpcompinit; zpcdreplay; bashcompinit" lucid
 zplugin light zdharma/fast-syntax-highlighting

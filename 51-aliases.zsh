@@ -12,3 +12,9 @@ function config {
     done
     yadm "${@}"
 }
+
+function kali {
+    test -z "${commands[docker]}" && echo "no docker" && return 1
+    docker pull kalilinux/kali-rolling
+    docker run --rm -it -v${PWD}:${PWD} -w${PWD} kalilinux/kali-rolling /bin/bash -x
+}

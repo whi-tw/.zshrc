@@ -6,11 +6,12 @@ function config {
     REPOS=("${HOME}/.zshrc.d" "${HOME}/.password-store")
     for repo in "${REPOS[@]}"
     do
+        test ! -d "${repo}" && continue
         pushd "${repo}"
         git "${@}"
         popd
     done
-    yadm "${@}"
+    test -d "~/.config/yadm/repo.git/" && yadm "${@}"
 }
 
 function kali {

@@ -18,7 +18,7 @@ else
 fi
 zplugin ice wait'1' lucid \
     atclone"${dircolors_cmd} -b LS_COLORS > clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh"
+    atpull'%atclone' src"clrs.zsh"
 zplugin light trapd00r/LS_COLORS
 
 zstyle ':completion:*:default' list-colors \

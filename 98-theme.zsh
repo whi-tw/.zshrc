@@ -35,5 +35,11 @@ zplugin env-whitelist 'SPACESHIP_*'
 
 # spaceship theme
 # Load custom `config_spaceship_prompt` function above
-zplugin ice atinit"config_spaceship_prompt"
+zplugin ice atinit"config_spaceship_prompt" \
+  if'! [[ "${OSTYPE}" =~ "^darwin*" ]]'
 zplugin light denysdovhan/spaceship-prompt
+
+zplugin ice from"gh-r" as"program" \
+  atclone'./starship init zsh --print-full-init > zhook.zsh' atpull'%atclone' \
+  pick"direnv" src"zhook.zsh" if'[[ "${OSTYPE}" =~ "^darwin*" ]]'
+zplugin light starship/starship

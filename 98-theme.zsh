@@ -1,20 +1,30 @@
 # spaceship theme settings
-theme_default() {
-  SPACESHIP_DOCKER_SHOW=false
-  SPACESHIP_NODE_SHOW=false
-  SPACESHIP_KUBECONTEXT_SHOW=false
-  SPACESHIP_CONDA_SHOW=false
-  SPACESHIP_DOTNET_SHOW=false
-  SPACESHIP_RUST_SHOW=false
-  SPACESHIP_PHP_SHOW=false
+spaceship_default() {
   SPACESHIP_CHAR_SYMBOL="$ "
   SPACESHIP_CHAR_SYMBOL_SECONDARY="❯ "
   SPACESHIP_CHAR_SYMBOL_ROOT="# "
+  SPACESHIP_PROMPT_ORDER=(
+    user
+    dir
+    host
+    git
+    ruby
+    golang
+    docker
+    venv
+    pyenv
+    exec_time
+    line_sep
+    battery
+    jobs
+    exit_code
+    char
+  )
 }
 
 # Configures the spaceship prompt
 config_spaceship_prompt() {
-    theme_default
+    spaceship_default
 }
 
 #
@@ -23,7 +33,7 @@ config_spaceship_prompt() {
 
 zplugin env-whitelist 'SPACESHIP_*'
 
-# Powerlevel10k theme
+# spaceship theme
 # Load custom `config_spaceship_prompt` function above
 zplugin ice atinit"config_spaceship_prompt"
 zplugin light denysdovhan/spaceship-prompt

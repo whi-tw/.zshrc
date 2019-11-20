@@ -34,3 +34,7 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 alias o='a -e open'
 alias c='a -e code'
 alias j='zz'
+
+zplugin ice wait"2" lucid as'program' if'[[ "${OSTYPE}" =~ "^darwin.*" ]]'\
+    mv'cli -> fly' pick'fly'
+zplugin snippet "https://concourse.whitwell.dev/api/v1/cli?arch=amd64&platform=darwin"

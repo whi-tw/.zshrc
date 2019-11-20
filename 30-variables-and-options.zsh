@@ -10,7 +10,7 @@ setopt autocd
 setopt auto_list
 setopt auto_pushd
 setopt hash_list_all            # Hash everything before completion
-setopt completealiases          # Complete alisases
+#setopt completealiases          # Complete alisases
 setopt always_to_end            # When completing from the middle of a word, move the cursor to the end of the word
 setopt list_ambiguous           # Complete as much of a completion until it gets ambiguous.
 setopt append_history

@@ -24,6 +24,7 @@ zplugin light trapd00r/LS_COLORS
 zstyle ':completion:*:default' list-colors \
     ${(s.:.)LS_COLORS} # To enable the coloring on completion
 
+alias ls='lsd' #override the previous alias, as lsd is now available
 
 zplugin ice wait'0' atload'_zsh_autosuggest_start' lucid
 zplugin light zsh-users/zsh-autosuggestions

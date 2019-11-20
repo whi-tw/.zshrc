@@ -22,3 +22,6 @@ zplugin light whi-tw/mykman
 
 zplugin ice from"github" as"program" pick"yadm"
 zplugin light TheLocehiliosan/yadm
+
+zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd'
+zplugin light Peltoche/lsd

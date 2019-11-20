@@ -9,5 +9,5 @@ test ! -d ~/.zplugin/bin && git clone https://github.com/zdharma/zplugin.git ~/.
 [ -f "${HOME}"/.env ] && source "${HOME}"/.env
 
 for f in "${HOME}"/.zshrc.d/*.zsh; do
-  source "${f}"
+	source "${f}"
 done

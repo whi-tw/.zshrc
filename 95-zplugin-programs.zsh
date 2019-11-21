@@ -24,5 +24,15 @@ zplugin light whi-tw/mykman
 zplugin ice from"github" as"program" pick"yadm"
 zplugin light TheLocehiliosan/yadm
 
-zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd'
+zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd' \
+	if'[[ "${OSTYPE}" =~ "^(darwin|linux-gnu).*" ]]'
 zplugin light Peltoche/lsd
+
+# lsd aliases
+if [[ -n "$commands[lsd]" ]]; then
+	alias ls='lsd'
+	alias l='ls -l'
+	alias la='ls -a'
+	alias lla='ls -la'
+	alias lt='ls --tree'
+fi

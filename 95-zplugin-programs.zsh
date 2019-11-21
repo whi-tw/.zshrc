@@ -6,6 +6,7 @@ zplugin ice wait"2" lucid as"program" pick"bin/git-dsf"
 zplugin light zdharma/zsh-diff-so-fancy
 
 zplugin ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
+	if'[[ "${OSTYPE}" =~ "^(darwin|linux-gnu).*" ]]' \
 	atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
 	pick"direnv" src"zhook.zsh"
 zplugin light direnv/direnv

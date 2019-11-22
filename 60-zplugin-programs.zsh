@@ -11,12 +11,6 @@ zplugin ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
 	pick"direnv" src"zhook.zsh"
 zplugin light direnv/direnv
 
-zplugin ice as"program" from"${GITHUB_USERNAME}@github.com" mv"gds* -> gds" \
-	make"!gds" if'[[ -n "$commands[go]" ]] && ! [[ -z "${GITHUB_USERNAME}" ]]' \
-	atclone'./gds bash-completion > completion.sh' atpull'%atclone' \
-	pick"gds" src'completion.sh'
-zplugin light alphagov/gds-cli
-
 zplugin ice from"github" as"program" mv"mykman -> ykman" \
 	pick"ykman"
 zplugin light whi-tw/mykman

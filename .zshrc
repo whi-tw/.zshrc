@@ -6,7 +6,8 @@ test ! -d ~/.zplugin/bin && git clone https://github.com/zdharma/zplugin.git ~/.
 # Source files
 #
 # Source local common environment variables
-[ -f "${HOME}"/.env ] && source "${HOME}"/.env
+# [ -f "${HOME}"/.env ] && source "${HOME}"/.env
+# Removed after discovering the existence of ~/.zshenv
 
 for f in "${HOME}"/.zshrc.d/*.zsh; do
 	source "${f}"

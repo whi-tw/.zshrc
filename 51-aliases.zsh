@@ -10,7 +10,7 @@ function config() {
 		git "${@}"
 		popd
 	done
-	test -d "~/.config/yadm/repo.git/" && yadm "${@}"
+	test -d "${HOME}/.config/yadm/repo.git" && yadm "${@}"
 }
 
 function kali() {

@@ -19,7 +19,7 @@ zplugin ice from"github" as"program" pick"yadm"
 zplugin light TheLocehiliosan/yadm
 
 zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd' \
-	if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]'
+	if'[[ "${OSTYPE}" =~ "^darwin.*" ]]'
 zplugin light Peltoche/lsd
 
 # lsd aliases

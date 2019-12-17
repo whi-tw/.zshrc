@@ -1,1 +1,4 @@
-export PATH="${HOME}/bin:/usr/local/sbin:${PATH}"
+# Add my local bin
+export PATH="${HOME}/bin:${PATH}"
+# Add JetBrains' command line launchers
+export PATH="${HOME}/.jetbrains-bin:${PATH}"

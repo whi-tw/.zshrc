@@ -35,3 +35,5 @@ zplugin light "chrissicool/zsh-256color"
 zplugin light peterhurford/git-it-on.zsh
 
 zplugin light whi-tw/git-prune
+
+zplugin light jreese/zsh-titles

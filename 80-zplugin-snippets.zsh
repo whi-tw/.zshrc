@@ -8,6 +8,8 @@ zplugin ice wait"0" lucid
 zplugin snippet OMZ::plugins/gpg-agent/gpg-agent.plugin.zsh
 zplugin ice wait"2" lucid
 zplugin snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
+zplugin ice wait"2" lucid
+zplugin snippet OMZ::lib/key-bindings.zsh
 
 # Setup fasd with caching from PZT module
 # Requirement: Install fasd for this to work

@@ -29,6 +29,11 @@ zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd' \
 	if'[[ "${OSTYPE}" =~ "^darwin.*" ]]'
 zplugin light Peltoche/lsd
 
+zplugin ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
+    atclone'mv */etc/hub.zsh_completion _hub' atpull'%atclone' pick'hub' \
+    if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]'
+zplugin light github/hub
+
 # lsd aliases
 if [[ -n "$commands[lsd]" ]]; then
 	alias ls='lsd'

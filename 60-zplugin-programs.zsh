@@ -22,7 +22,8 @@ zplugin ice wait'1' lucid from"gh-r" as"program"  mv"aws-vault-linux-amd64 -> aw
 	pick'aws-vault' ver'v4.7.1' nocompletions
 zplugin light 99designs/aws-vault
 
-zplugin ice from"github" as"program" pick"yadm"
+zplugin ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm" \
+	pick"yadm"
 zplugin light TheLocehiliosan/yadm
 
 zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd' \

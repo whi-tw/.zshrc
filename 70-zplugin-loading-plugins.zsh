@@ -28,6 +28,9 @@ zplugin ice wait'1' lucid atclone"./libexec/pyenv init -> zpyenv.zsh" \
 zplugin light pyenv/pyenv
 
 zplugin ice wait'1' lucid
+zplugin light cda0/zsh-tfenv
+
+zplugin ice wait'1' lucid
 zplugin light laggardkernel/zsh-thefuck
 
 zplugin light "chrissicool/zsh-256color"

@@ -26,24 +26,14 @@ zplugin ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm"
 	pick"yadm"
 zplugin light TheLocehiliosan/yadm
 
-zplugin ice from"gh-r" as"program" pick"lsd" mv'lsd*/lsd -> lsd' \
-	if'[[ "${OSTYPE}" =~ "^darwin.*" ]]'
-zplugin light Peltoche/lsd
-
 zplugin ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
     atclone'mv */etc/hub.zsh_completion _hub' atpull'%atclone' pick'hub' \
     if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]'
 zplugin light github/hub
 
-# lsd aliases
-if [[ -n "$commands[lsd]" ]]; then
-	alias ls='lsd'
-	alias lt='ls --tree'
-elif  [[ "${OSTYPE}" =~ "^darwin.*" ]]; then
-	alias ls='gls --color=always'
-else
-	alias ls='ls --color=always'
-fi
+zplugin ice from'gh-r' as'program' pick'hugo' bpick'*Linux-64*tar.gz'
+zplugin light gohugoio/hugo
+
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'

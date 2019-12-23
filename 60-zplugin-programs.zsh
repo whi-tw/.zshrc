@@ -27,7 +27,7 @@ zplugin ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm"
 zplugin light TheLocehiliosan/yadm
 
 zplugin ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
-    atclone'mv */etc/hub.zsh_completion _hub' atpull'%atclone' pick'hub' \
+    atclone'mv */etc/hub.zsh_completion _hub && chown "${USER}":"$(id -gn ${USER})" _hub && chmod 644 _hub' atpull'%atclone' pick'hub' \
     if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]'
 zplugin light github/hub
 

@@ -33,7 +33,3 @@ zplugin light github/hub
 
 zplugin ice from'gh-r' as'program' pick'hugo' bpick'*Linux-64*tar.gz'
 zplugin light gohugoio/hugo
-
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'

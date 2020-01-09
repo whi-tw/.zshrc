@@ -1,11 +1,6 @@
 #
 # Zplugin Snippets
 #
-zplugin ice wait"0" lucid \
-	if'[[ -f "${HOME}/.ssh/config" ]]'
-zplugin snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-zplugin ice wait"0" lucid
-zplugin snippet OMZ::plugins/gpg-agent/gpg-agent.plugin.zsh
 zplugin ice wait"2" lucid
 zplugin snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 zplugin ice wait"2" lucid

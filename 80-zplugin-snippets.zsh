@@ -1,8 +1,8 @@
 #
 # Zplugin Snippets
 #
-zplugin ice wait"2" lucid
-zplugin snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
+# zplugin ice wait"2" lucid
+# zplugin snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
 zplugin ice wait"2" lucid
 zplugin snippet OMZ::lib/key-bindings.zsh
 

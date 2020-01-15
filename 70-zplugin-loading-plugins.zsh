@@ -27,6 +27,11 @@ zplugin ice wait'1' lucid atclone"./libexec/pyenv init -> zpyenv.zsh" \
 	as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
 zplugin light pyenv/pyenv
 
+zplugin ice wait'1' lucid atclone"./libexec/rbenv init -> zrbenv.zsh" \
+	atinit'export RBENV_ROOT="${HOME}/.rbenv"' atpull"%atclone" \
+	as'command' pick'bin/rbenv' src"zrbenv.zsh" nocompile'!'
+zplugin light rbenv/rbenv
+
 zplugin ice wait'1' lucid
 zplugin light cda0/zsh-tfenv
 

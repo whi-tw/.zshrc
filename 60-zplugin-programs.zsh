@@ -19,7 +19,7 @@ zplugin light syndbg/goenv
 
 zplugin ice wait'1' lucid from"gh-r" as"program"  mv"aws-vault-linux-amd64 -> aws-vault" \
 	if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \
-	pick'aws-vault' ver'v4.7.1' nocompletions
+	pick'aws-vault' nocompletions
 zplugin light 99designs/aws-vault
 
 zplugin ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm" \

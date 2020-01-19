@@ -33,3 +33,7 @@ zplugin light github/hub
 
 zplugin ice from'gh-r' as'program' pick'hugo' bpick'*Linux-64*tar.gz'
 zplugin light gohugoio/hugo
+
+zplugin ice from'gh-r' as'program' pick'docker-credential-pass' \
+	bpick'docker-credential-pass*amd64*tar.gz'
+zplugin light docker/docker-credential-helpers

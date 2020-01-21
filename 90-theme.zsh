@@ -31,15 +31,15 @@ config_spaceship_prompt() {
 # Themes and settings
 #
 
-zplugin env-whitelist 'SPACESHIP_*'
+zinit env-whitelist 'SPACESHIP_*'
 
 # spaceship theme
 # Load custom `config_spaceship_prompt` function above
-zplugin ice atinit"config_spaceship_prompt" \
+zinit ice atinit"config_spaceship_prompt" \
 	if'[[ "${OSTYPE}" =~ "^linux-android.*" ]]'
-zplugin light denysdovhan/spaceship-prompt
+zinit light denysdovhan/spaceship-prompt
 
-zplugin ice from"gh-r" as"program" \
+zinit ice from"gh-r" as"program" \
 	atclone'./starship init zsh --print-full-init > zhook.zsh' atpull'%atclone' \
 	pick"direnv" src"zhook.zsh" if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]'
-zplugin light starship/starship
+zinit light starship/starship

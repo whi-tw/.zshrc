@@ -1,39 +1,39 @@
 #
-# Zplugin Programs
+# zinit Programs
 #
 
-zplugin ice wait"2" lucid as"program" pick"bin/git-dsf"
-zplugin light zdharma/zsh-diff-so-fancy
+zinit ice wait"2" lucid as"program" pick"bin/git-dsf"
+zinit light zdharma/zsh-diff-so-fancy
 
-zplugin ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
+zinit ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
 	if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \
 	atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
 	pick"direnv" src"zhook.zsh"
-zplugin light direnv/direnv
+zinit light direnv/direnv
 
-zplugin ice from"github" as"program" \
+zinit ice from"github" as"program" \
 	if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \
 	atclone'./bin/goenv init - > zhook.zsh' atpull'%atclone' \
 	pick"bin/goenv" src"zhook.zsh"
-zplugin light syndbg/goenv
+zinit light syndbg/goenv
 
-zplugin ice wait'1' lucid from"gh-r" as"program"  mv"aws-vault-linux-amd64 -> aws-vault" \
+zinit ice wait'1' lucid from"gh-r" as"program"  mv"aws-vault-linux-amd64 -> aws-vault" \
 	if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \
 	pick'aws-vault' nocompletions
-zplugin light 99designs/aws-vault
+zinit light 99designs/aws-vault
 
-zplugin ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm" \
+zinit ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm" \
 	pick"yadm"
-zplugin light TheLocehiliosan/yadm
+zinit light TheLocehiliosan/yadm
 
-zplugin ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
+zinit ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
     atclone'mv */etc/hub.zsh_completion _hub && chown "${USER}":"$(id -gn ${USER})" _hub && chmod 644 _hub' atpull'%atclone' pick'hub' \
     if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]'
-zplugin light github/hub
+zinit light github/hub
 
-zplugin ice from'gh-r' as'program' pick'hugo' bpick'*Linux-64*tar.gz'
-zplugin light gohugoio/hugo
+zinit ice from'gh-r' as'program' pick'hugo' bpick'*Linux-64*tar.gz'
+zinit light gohugoio/hugo
 
-zplugin ice from'gh-r' as'program' pick'docker-credential-pass' \
+zinit ice from'gh-r' as'program' pick'docker-credential-pass' \
 	if'[[ -n "$commands[pass]" ]] && [[ -n "$commands[docker]" ]]' bpick'docker-credential-pass*amd64*tar.gz'
-zplugin light docker/docker-credential-helpers
+zinit light docker/docker-credential-helpers

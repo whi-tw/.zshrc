@@ -1,10 +1,10 @@
 #
-# Zplugin Snippets
+# zinit Snippets
 #
-# zplugin ice wait"2" lucid
-# zplugin snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
-zplugin ice wait"2" lucid
-zplugin snippet OMZ::lib/key-bindings.zsh
+# zinit ice wait"2" lucid
+# zinit snippet OMZ::plugins/rbenv/rbenv.plugin.zsh
+zinit ice wait"2" lucid
+zinit snippet OMZ::lib/key-bindings.zsh
 
 # Setup fasd with caching from PZT module
 # Requirement: Install fasd for this to work
@@ -19,8 +19,8 @@ zplugin snippet OMZ::lib/key-bindings.zsh
 # Ref: https://github.com/sorin-ionescu/prezto/blob/master/modules/fasd/init.zsh#L22
 # Remove it when freshly reinstalling the fasd plugin
 # Currently it doesnt' regenerate this file.
-zplugin ice svn submods"clvv/fasd -> external"
-zplugin snippet PZT::modules/fasd
+zinit ice svn submods"clvv/fasd -> external"
+zinit snippet PZT::modules/fasd
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
 alias d='fasd -d'        # directory
@@ -33,9 +33,9 @@ alias o='a -e open'
 alias c='a -e code'
 alias j='zz'
 
-zplugin ice wait"2" lucid as'program' if'[[ "${OSTYPE}" =~ "^darwin.*" ]]' \
+zinit ice wait"2" lucid as'program' if'[[ "${OSTYPE}" =~ "^darwin.*" ]]' \
 	mv'cli -> fly' pick'fly'
-zplugin snippet "https://concourse.whitwell.dev/api/v1/cli?arch=amd64&platform=darwin"
-zplugin ice wait"2" lucid as'program' if'[[ "${OSTYPE}" =~ "linux-gnu" ]]' \
+zinit snippet "https://concourse.whitwell.dev/api/v1/cli?arch=amd64&platform=darwin"
+zinit ice wait"2" lucid as'program' if'[[ "${OSTYPE}" =~ "linux-gnu" ]]' \
 	mv'cli -> fly' pick'fly'
-zplugin snippet "https://concourse.whitwell.dev/api/v1/cli?arch=amd64&platform=linux"
+zinit snippet "https://concourse.whitwell.dev/api/v1/cli?arch=amd64&platform=linux"

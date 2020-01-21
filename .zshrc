@@ -1,5 +1,5 @@
-test ! -d ~/.zplugin/bin && git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
-# Get zplugin first: git clone https://github.com/zdharma/zplugin.git ~/.zplugin/bin
+test ! -d ~/.zinit/bin && git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+# Get zinit first: git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 # Symlink .zshrc: cd ~; ln -s ~/.zshrc.d/.zshrc
 
 #

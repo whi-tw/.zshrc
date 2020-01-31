@@ -37,3 +37,12 @@ zinit light gohugoio/hugo
 zinit ice from'gh-r' as'program' pick'docker-credential-pass' \
 	if'[[ -n "$commands[pass]" ]] && [[ -n "$commands[docker]" ]]' bpick'docker-credential-pass*amd64*tar.gz'
 zinit light docker/docker-credential-helpers
+
+zinit ice from"github" as"program" pick"fasd" \
+    atclone'./fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install > fasd.zsh' \
+    atpull"%atclone" src'fasd.zsh' nocompile'!'
+zinit light clvv/fasd
+
+alias o='a -e xdg-open'
+alias c='a -e code'
+alias j='zz'

@@ -12,9 +12,8 @@ fi
 
 zinit ice wait'1' lucid \
 	atclone"${dircolors_cmd} -b LS_COLORS > clrs.zsh" \
-	atpull'%atclone' src"clrs.zsh"
+	atpull'%atclone' src"clrs.zsh" nocompile'!'
 zinit light trapd00r/LS_COLORS
-
 zstyle ':completion:*:default' list-colors \
 	${(s.:.)LS_COLORS} # To enable the coloring on completion
 
@@ -24,12 +23,12 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
 zinit ice wait'1' lucid atclone"./libexec/pyenv init -> zpyenv.zsh" \
 	atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
-	as'command' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
+	as'program' pick'bin/pyenv' src"zpyenv.zsh" nocompile'!'
 zinit light pyenv/pyenv
 
 zinit ice wait'1' lucid atclone"./libexec/rbenv init -> zrbenv.zsh" \
 	atinit'export RBENV_ROOT="${HOME}/.rbenv"' atpull"%atclone" \
-	as'command' pick'bin/rbenv' src"zrbenv.zsh" nocompile'!'
+	as'program' pick'bin/rbenv' src"zrbenv.zsh" nocompile'!'
 zinit light rbenv/rbenv
 
 zinit ice wait'1' lucid

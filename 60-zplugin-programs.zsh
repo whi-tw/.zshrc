@@ -26,6 +26,11 @@ zinit ice from"github" as"program" mv"completion/yadm.zsh_completion -> _yadm" \
 	pick"yadm" nocompile'!'
 zinit light TheLocehiliosan/yadm
 
+zinit ice as'program' \
+	make"!" if'[[ -n "$commands[go]" ]] && ! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \
+	atclone'bin/gh completion -s zsh > _gh' atpull'%atclone' pick'bin/gh' nocompile'!'
+zinit light cli/cli
+
 zinit ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
 	atclone'mv */etc/hub.zsh_completion _hub && chown "${USER}":"$(id -gn ${USER})" _hub && chmod 644 _hub' \
 	atpull'%atclone' pick'hub' if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' nocompile'!'

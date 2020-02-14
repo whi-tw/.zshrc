@@ -41,6 +41,6 @@ zinit light "chrissicool/zsh-256color"
 
 zinit light peterhurford/git-it-on.zsh
 
-zinit light whi-tw/git-prune
+zinit light diazod/git-prune
 
 zinit light jreese/zsh-titles

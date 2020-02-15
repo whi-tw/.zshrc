@@ -35,8 +35,5 @@ export HISTSIZE=10000
 export SAVEHIST=${HISTSIZE}
 export TERM="xterm-256color"
 
-# aws-vault
-#export AWS_VAULT_BACKEND=file
-
 # ssh-agent
 zstyle :omz:plugins:ssh-agent identities id_ecdsa id_ed25519 id_rsa id_rsa_2048

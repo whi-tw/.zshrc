@@ -34,9 +34,6 @@ zinit light rbenv/rbenv
 zinit ice wait'1' lucid
 zinit light cda0/zsh-tfenv
 
-zinit ice wait'1' lucid
-zinit light laggardkernel/zsh-thefuck
-
 zinit light "chrissicool/zsh-256color"
 
 zinit light peterhurford/git-it-on.zsh

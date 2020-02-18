@@ -32,6 +32,9 @@ zinit ice wait'1' lucid atclone"./libexec/rbenv init -> zrbenv.zsh" \
 zinit light rbenv/rbenv
 
 zinit ice wait'1' lucid
+zinit light laggardkernel/zsh-thefuck
+
+zinit ice wait'1' lucid
 zinit light cda0/zsh-tfenv
 
 zinit light "chrissicool/zsh-256color"

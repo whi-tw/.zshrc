@@ -40,6 +40,7 @@ zinit ice atinit"config_spaceship_prompt" \
 zinit light denysdovhan/spaceship-prompt
 
 zinit ice from"gh-r" as"program" \
+	bpick'*.tar.gz' \
 	atclone'./starship init zsh --print-full-init > zhook.zsh' atpull'%atclone' \
 	pick"direnv" src"zhook.zsh" if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \
 	nocompile'!'

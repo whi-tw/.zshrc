@@ -18,3 +18,8 @@ zinit snippet 'https://aur.archlinux.org/cgit/aur.git/plain/_pamac?h=pamac-zsh-c
 # Syntax Highlighting (should always be at the end)
 zinit ice wait"0" atinit"zpcompinit; zpcdreplay; bashcompinit" lucid
 zinit light zdharma/fast-syntax-highlighting
+
+if [[ -n "$commands[fzf]" ]]; then
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
+fi

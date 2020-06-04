@@ -31,10 +31,20 @@ zinit ice from'gh-r' as'program' mv'*/bin/hub -> hub' \
 	atpull'%atclone' pick'hub' if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' nocompile'!'
 zinit light github/hub
 
+zinit ice from'github' as'program' pick"bin/git-fuzzy"
+zinit light bigH/git-fuzzy
+
+zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+zinit light sharkdp/bat
+
+zinit ice as"program" from"gh-r" mv"exa-* -> exa" pick"exa"
+zinit light ogham/exa
+
 zinit ice from"github" as"program" pick"fasd" \
 	atclone'./fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install > fasd.zsh' \
 	atpull"%atclone" src'fasd.zsh' nocompile'!'
 zinit light clvv/fasd
+
 alias o='a -e xdg-open'
 alias c='a -e code'
 alias j='zz'

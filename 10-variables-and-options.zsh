@@ -37,3 +37,9 @@ export TERM="xterm-256color"
 
 # ssh-agent
 zstyle :omz:plugins:ssh-agent identities id_ecdsa id_ed25519 id_rsa id_rsa_2048
+
+# editor
+
+if [[ -n "$commands[vim]" ]]; then
+    export VISUAL="vim"
+fi

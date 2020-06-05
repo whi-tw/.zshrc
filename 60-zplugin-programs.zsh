@@ -2,8 +2,8 @@
 # zinit Programs
 #
 
-zinit ice wait"2" lucid as"program" pick"bin/git-dsf"
-zinit light zdharma/zsh-diff-so-fancy
+zinit ice from"gh-r" as"program" pick"delta-*/delta"
+zinit light dandavison/delta
 
 zinit ice wait'1' lucid from"gh-r" as"program" mv"direnv* -> direnv" \
 	if'! [[ "${OSTYPE}" =~ "^linux-android.*" ]]' \

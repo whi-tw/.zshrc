@@ -20,6 +20,6 @@ zinit ice wait"0" atinit"zpcompinit; zpcdreplay; bashcompinit" lucid
 zinit light zdharma/fast-syntax-highlighting
 
 if [[ -n "$commands[fzf]" ]]; then
-    source /usr/share/fzf/completion.zsh
-    source /usr/share/fzf/key-bindings.zsh
+    zinit snippet /usr/share/fzf/completion.zsh
+    zinit snippet /usr/share/fzf/key-bindings.zsh
 fi

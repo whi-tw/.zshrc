@@ -1,7 +1,7 @@
 #
 # zinit Snippets
 
-zinit ice wait"2" lucid
+#zinit ice wait"2" lucid
 zinit snippet OMZ::lib/key-bindings.zsh
 
 zinit ice wait"2" lucid as'program' if'[[ "${OSTYPE}" =~ "^darwin.*" ]]' \

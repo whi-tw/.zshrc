@@ -19,7 +19,9 @@ zinit snippet 'https://aur.archlinux.org/cgit/aur.git/plain/_pamac?h=pamac-zsh-c
 zinit ice wait"0" atinit"zpcompinit; zpcdreplay; bashcompinit" lucid
 zinit light zdharma/fast-syntax-highlighting
 
-if [[ -n "$commands[fzf]" ]]; then
+if [[ -n "$commands[mcfly]" ]]; then
+    zinit snippet /usr/share/doc/mcfly/mcfly.zsh
+elif [[ -n "$commands[fzf]" ]]; then
     zinit snippet /usr/share/fzf/completion.zsh
-    zinit snippet /usr/share/fzf/key-bindings.zsh
+    bindkey "^R" | grep -q undefined && zinit snippet /usr/share/fzf/key-bindings.zsh
 fi

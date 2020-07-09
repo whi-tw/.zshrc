@@ -6,10 +6,15 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias ls='ls --color'
+if [ "$commands[lsd]" != "" ]; then
+    alias ls='lsd'
+else
+    alias ls="ls --color"
+fi
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
+alias lt='ls --tree'
 
 alias mtr='mtr --curses'
 

@@ -20,8 +20,8 @@ zinit ice wait"0" atinit"zpcompinit; zpcdreplay; bashcompinit" lucid
 zinit light zdharma/fast-syntax-highlighting
 
 if [[ -n "$commands[mcfly]" ]]; then
-    zinit snippet /usr/share/doc/mcfly/mcfly.zsh
+    source /usr/share/doc/mcfly/mcfly.zsh
 elif [[ -n "$commands[fzf]" ]]; then
-    zinit snippet /usr/share/fzf/completion.zsh
-    bindkey "^R" | grep -q undefined && zinit snippet /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+    bindkey "^R" | grep -q undefined && source /usr/share/fzf/key-bindings.zsh
 fi

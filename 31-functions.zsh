@@ -14,3 +14,11 @@ function kali() {
 	docker pull kalilinux/kali-rolling
 	docker run --rm -it -v${PWD}:${PWD} -w${PWD} kalilinux/kali-rolling /bin/bash -x
 }
+
+function history() {
+	if [ ${#} -eq 0 ]; then
+		builtin history 1
+	else
+		builtin history ${@}
+	fi
+}

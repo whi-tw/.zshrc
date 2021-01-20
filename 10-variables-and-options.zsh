@@ -40,6 +40,6 @@ zstyle :omz:plugins:ssh-agent identities id_ecdsa id_ed25519 id_rsa id_rsa_2048
 
 # editor
 
-if [[ -n "$commands[vim]" ]]; then
+if [[ -n "$commands[vim]" ]] && [[ "${TERM_PROGRAM}" != "vscode" ]]; then
     export VISUAL="vim"
 fi

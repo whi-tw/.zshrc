@@ -21,3 +21,5 @@ alias mtr='mtr --curses'
 alias delim="seq  -f "=" -s '' $(tput cols)"
 
 alias sysu="systemctl --user"
+
+alias glow="glow -p"

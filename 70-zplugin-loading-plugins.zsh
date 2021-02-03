@@ -17,9 +17,9 @@ zinit light trapd00r/LS_COLORS
 zstyle ':completion:*:default' list-colors \
 	${(s.:.)LS_COLORS} # To enable the coloring on completion
 
-zinit ice wait'0' atload'_zsh_autosuggest_start' lucid
-zinit light zsh-users/zsh-autosuggestions
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
+#zinit ice wait'0' atload'_zsh_autosuggest_start' lucid
+#zinit light zsh-users/zsh-autosuggestions
+#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
 zinit ice wait'1' lucid atclone"./libexec/pyenv init -> zpyenv.zsh" \
 	atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \

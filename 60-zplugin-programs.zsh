@@ -40,6 +40,8 @@ zinit ice from"github" as"program" pick"fasd" \
 	atpull"%atclone" src'fasd.zsh' nocompile'!'
 zinit light clvv/fasd
 
+zplugin light hlissner/zsh-autopair
+
 alias o='a -e xdg-open'
 alias c='a -e code'
 alias j='zz'

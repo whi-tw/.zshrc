@@ -4,8 +4,8 @@
 #
 
 # zsh
-zinit ice wait"0" blockf lucid
-zinit light zsh-users/zsh-completions
+zinit wait lucid blockf for \
+    zsh-users/zsh-completions
 
 # docker
 zinit ice as"completion" if'[[ -n "$commands[docker]" ]]'
@@ -15,9 +15,14 @@ zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_
 zinit ice as"completion" if'[[ -n "$commands[pamac]" ]]'
 zinit snippet 'https://aur.archlinux.org/cgit/aur.git/plain/_pamac?h=pamac-zsh-completions'
 
+if [[ -n "$commands[aws_completer]" ]]; then
+  zinit wait lucid blockf for \
+    /usr/bin/aws_zsh_completer.sh
+fi
+
 # Syntax Highlighting (should always be at the end)
-zinit ice wait"0" atinit"zpcompinit; zpcdreplay; bashcompinit" lucid
-zinit light zdharma/fast-syntax-highlighting
+zinit wait lucid atload"zpcompinit; zpcdreplay; bashcompinit" for \
+    zdharma/fast-syntax-highlighting
 
 if [[ -n "$commands[mcfly]" ]]; then
     source /usr/share/doc/mcfly/mcfly.zsh
@@ -25,3 +30,5 @@ elif [[ -n "$commands[fzf]" ]]; then
     source /usr/share/fzf/completion.zsh
     bindkey "^R" | grep -q undefined && source /usr/share/fzf/key-bindings.zsh
 fi
+
+

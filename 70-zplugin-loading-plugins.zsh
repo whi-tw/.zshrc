@@ -25,6 +25,7 @@ zinit light rbenv/rbenv
 zinit wait'1' lucid for \
 	light-mode laggardkernel/zsh-thefuck \
 	light-mode cda0/zsh-tfenv
+export THEFUCK_PRIORITY="git_hook_bypass=1100" # push branch priority
 
 zinit for \
 	light-mode "chrissicool/zsh-256color" \

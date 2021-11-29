@@ -22,7 +22,7 @@ fi
 
 # Syntax Highlighting (should always be at the end)
 zinit wait lucid atload"zpcompinit; zpcdreplay; bashcompinit" for \
-    zdharma/fast-syntax-highlighting
+    zdharma-continuum/fast-syntax-highlighting
 
 if [[ -n "$commands[mcfly]" ]]; then
     source /usr/share/doc/mcfly/mcfly.zsh
@@ -31,4 +31,6 @@ elif [[ -n "$commands[fzf]" ]]; then
     bindkey "^R" | grep -q undefined && source /usr/share/fzf/key-bindings.zsh
 fi
 
-
+if [[ -n "$commands[op]" ]]; then
+    eval "$(op completion zsh)"
+fi

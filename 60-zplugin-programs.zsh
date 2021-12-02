@@ -16,8 +16,7 @@ zinit from"github" as"program" for \
 
 zinit as"null" wait"2" lucid from"gh-r" for \
 	sbin"delta-*/delta" dandavison/delta \
-	mv"bat* -> bat" sbin"bat/bat" @sharkdp/bat \
-	mv"exa-* -> exa" sbin ogham/exa
+	mv"bat* -> bat" sbin"bat/bat" @sharkdp/bat
 
 zinit as"null" wait"3" lucid for \
     sbin  Fakerr/git-recall \

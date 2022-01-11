@@ -22,3 +22,9 @@ function history() {
 		builtin history ${@}
 	fi
 }
+
+function update-zshrc() {
+	pushd ${HOME}/.zshrc.d
+	git pull
+	popd
+}

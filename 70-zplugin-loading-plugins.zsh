@@ -12,7 +12,7 @@ fi
 
 zinit pack for ls_colors
 
-zinit ice wait'1' lucid atclone"./libexec/pyenv init -> zpyenv.zsh; ./libexec/pyenv init --path > zpyenvpath.zsh" \
+zinit ice lucid atclone"./libexec/pyenv init -> zpyenv.zsh; ./libexec/pyenv init --path > zpyenvpath.zsh" \
 	atinit'export PYENV_ROOT="${HOME}/.pyenv"' atpull"%atclone" \
 	as'program' pick'bin/pyenv' multisrc"zpyenv{,path}.zsh" nocompile'!'
 zinit light pyenv/pyenv

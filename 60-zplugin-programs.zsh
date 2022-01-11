@@ -12,7 +12,9 @@ zinit from"github" as"program" for \
 	light-mode mv"completion/yadm.zsh_completion -> _yadm" pick"yadm" nocompile'!' \
 		TheLocehiliosan/yadm \
 	light-mode pick"bin/git-fuzzy" \
-		bigH/git-fuzzy
+		bigH/git-fuzzy\
+	light-mode atclone'go build .; mv contrib/completions/zsh/aws-vault.zsh _zsh' atpull'%atclone' pick'aws-vault' nocompile'!'\
+		99designs/aws-vault
 
 zinit as"null" wait"2" lucid from"gh-r" for \
 	sbin"delta-*/delta" dandavison/delta \

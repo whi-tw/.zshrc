@@ -4,3 +4,6 @@ all: $(objects)
 
 %.zsh.zwc: %.zsh
 	libs/zcompile $<
+
+clean:
+	rm -f *.zsh.zwc

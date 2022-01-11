@@ -9,7 +9,7 @@ zinit from"github" as"program" for \
 	light-mode pick"fasd" atpull"%atclone" src'fasd.zsh' nocompile'!' \
 		atclone'./fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install > fasd.zsh' \
 		clvv/fasd \
-	light-mode mv"completion/yadm.zsh_completion -> _yadm" pick"yadm" nocompile'!' \
+	light-mode mv"completion/zsh/_yadm -> _yadm" pick"yadm" nocompile'!' \
 		TheLocehiliosan/yadm \
 	light-mode pick"bin/git-fuzzy" \
 		bigH/git-fuzzy\

@@ -22,10 +22,10 @@ zinit ice wait'1' lucid atclone"./libexec/rbenv init -> zrbenv.zsh" \
 	as'program' pick'bin/rbenv' src"zrbenv.zsh" nocompile'!'
 zinit light rbenv/rbenv
 
-zinit ice wait'1' lucid atclone"ln -s nodeenv.py nodeenv" \
-	atpull"%atclone" \
-	as'program' pick'nodeenv' nocompile'!'
-zinit light whi-tw/nodeenv
+zinit ice wait'1' lucid atclone"./libexec/nodenv init -> znodenv.zsh" \
+	atinit'export NODENV_ROOT="${HOME}/.nodenv"' atpull"%atclone" \
+	as'program' pick'bin/nodenv' src"znodenv.zsh" nocompile'!'
+zinit light nodenv/nodenv
 
 zinit wait'1' lucid for \
 	light-mode laggardkernel/zsh-thefuck \

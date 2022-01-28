@@ -11,13 +11,17 @@ zinit wait lucid blockf for \
 zinit ice as"completion" if'[[ -n "$commands[docker]" ]]'
 zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 
+# docker-compose
+zinit ice as"completion" if'[[ -n "$commands[docker-compose]" ]]'
+zinit snippet https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/zsh/_docker-compose
+
 # pamac
 zinit ice as"completion" if'[[ -n "$commands[pamac]" ]]'
 zinit snippet 'https://aur.archlinux.org/cgit/aur.git/plain/_pamac?h=pamac-zsh-completions'
 
 if [[ -n "$commands[aws_completer]" ]]; then
-  zinit wait lucid blockf for \
-    /usr/bin/aws_zsh_completer.sh
+    zinit wait lucid blockf for \
+        /usr/bin/aws_zsh_completer.sh
 fi
 
 # Syntax Highlighting (should always be at the end)

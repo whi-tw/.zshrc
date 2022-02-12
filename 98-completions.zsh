@@ -28,7 +28,7 @@ zinit snippet https://raw.githubusercontent.com/chmouel/oh-my-zsh-openshift/mast
 
 zinit snippet OMZP::helm
 zinit snippet OMZP::kubectl
-zinit snippet OMZP::fzf
+test -n "${commands[fzf]}" && zinit snippet OMZP::fzf
 zinit snippet https://gist.githubusercontent.com/whi-tw/e1ede8654707b1203d78c4e9d663f803/raw/0bf28ae754366b6f8ccc750c9455b981e69cf8a3/gh.plugin.zsh
 
 if [[ -n "${commands[aws_completer]}" ]]; then

@@ -6,7 +6,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-if [ "$commands[lsd]" != "" ]; then
+if [ "${commands[lsd]}" != "" ]; then
     alias ls='lsd'
 else
     alias ls="ls --color"

@@ -1,5 +1,5 @@
 {
-    "files.exclude": {
-        "*.zsh.zwc": true
-    }
+  "files.exclude": {
+    "*.zsh.zwc": true
+  }
 }

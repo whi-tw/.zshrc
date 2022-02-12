@@ -4,8 +4,8 @@
 
 # ZSH Options
 # http://zsh.sourceforge.net/Doc/Release/Options.html
+# setopt autocd               # cd to directory if it's put in on cli
 setopt promptsubst            # Allow funky stuff in prompt
-setopt autocd                 # cd to directory if it's put in on cli
 setopt auto_list              # ambiguous = list
 setopt auto_pushd             # cd = pushd
 setopt hash_list_all          # Hash everything before completion
@@ -29,15 +29,10 @@ bashcompinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+zstyle ':plugin:starship' path "${HOME}/.asdf/shims/starship"
+
 # History
-export HISTFILE="$HOME/.zsh_history"
+export HISTFILE="${HOME}/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=${HISTSIZE}
 #export TERM="xterm-256color"
-
-
-# editor
-
-if [[ -n "$commands[vim]" ]] && [[ "${TERM_PROGRAM}" != "vscode" ]]; then
-    export VISUAL="vim"
-fi

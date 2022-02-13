@@ -29,8 +29,20 @@ zinit snippet https://raw.githubusercontent.com/chmouel/oh-my-zsh-openshift/mast
 zinit snippet OMZP::helm
 zinit snippet OMZP::kubectl
 test -n "${commands[fzf]}" && zinit snippet OMZP::fzf
-zinit snippet https://gist.githubusercontent.com/whi-tw/e1ede8654707b1203d78c4e9d663f803/raw/0bf28ae754366b6f8ccc750c9455b981e69cf8a3/gh.plugin.zsh
 
+export COMPLETIONS_DIR="$(dirname ${(%):-%x})/completions.d"
+if [ -d "${COMPLETIONS_DIR}" ]; then
+    command mkdir -p "$ZSH_CACHE_DIR/completions"
+    (( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
+    [[ "${COMPLETIONS_DIR}"/.complete_base.zsh.zwc -nt "${COMPLETIONS_DIR}"/.complete_base.zsh ]] || zcompile "${COMPLETIONS_DIR}"/.complete_base.zsh
+    source "${COMPLETIONS_DIR}"/.complete_base.zsh
+    for f in "${COMPLETIONS_DIR}"/*.zsh; do
+        [[ "${f}.zwc" -nt "${f}" ]] || zcompile "${f}"
+        source "${f}"
+    done
+    unset gen_my_completion _COMPLETION_GEN_CMDNAME _COMPLETION_GEN_GENCMD
+fi
+unset COMPLETIONS_DIR
 if [[ -n "${commands[aws_completer]}" ]]; then
     complete -C "${commands[aws_completer]}" aws
 fi

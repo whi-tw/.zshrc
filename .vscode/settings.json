@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "**.zsh.zwc": true
+  },
+  "editor.formatOnSave": false,
+  "shellcheck.enable": false
+}

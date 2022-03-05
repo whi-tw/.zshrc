@@ -38,6 +38,7 @@ export SAVEHIST=${HISTSIZE}
 export DISABLE_FZF_KEY_BINDINGS="true"
 
 export MCFLY_FUZZY=2
+export MCFLY_RESULTS_SORT=LAST_RUN
 export MCFLY_DISABLE_MENU=TRUE
 
 znap eval omz-keybind 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/key-bindings.zsh'

@@ -27,3 +27,5 @@ alias glow="glow -p"
 if [ -n "${commands[codium]}" ] && [ -z "${commands[code]}" ]; then
     alias code='codium'
 fi
+
+alias t="todo.sh"

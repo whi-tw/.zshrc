@@ -5,3 +5,4 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source jreese/zsh-titles
 znap source hlissner/zsh-autopair
 znap source chrissicool/zsh-256color
+znap source agkozak/zsh-z

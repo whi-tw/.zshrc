@@ -42,3 +42,5 @@ export MCFLY_RESULTS_SORT=LAST_RUN
 export MCFLY_DISABLE_MENU=TRUE
 
 znap eval omz-keybind 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/key-bindings.zsh'
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'

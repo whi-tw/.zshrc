@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+INSTALLDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+test -L "${HOME}/.zshrc" && mv "${HOME}/.zshrc" "${HOME}/.zshrc.old_build_zshrc"
+echo export INSTALLDIR="${INSTALLDIR}" > "${INSTALLDIR}"/98.0-os-specific.zsh
+tmpfile="$(mktemp)"
+for file in "${INSTALLDIR}"/*.zsh; do
+    filename="$(basename ${file})"
+    python "${INSTALLDIR}"/scripts/header.py "${filename}" >> "${tmpfile}"
+    cat "${file}" >> "${tmpfile}"
+    echo -e "\n" >> "${tmpfile}"
+done
+cat "${tmpfile}" | tee "${HOME}/.zshrc"
+rm "${tmpfile}"

@@ -11,8 +11,9 @@ if [ -n "${commands[lsd]}" ]; then
 else
     alias ls="ls --color"
 fi
-alias l='ls -l'
-alias la='ls -a'
+alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
 alias lla='ls -la'
 alias lt='ls --tree'
 

@@ -13,26 +13,19 @@ setopt always_to_end          # When completing from the middle of a word, move 
 setopt list_ambiguous         # Complete as much of a completion until it gets ambiguous.
 setopt auto_menu              # show menu with double tab
 setopt complete_in_word       # allows completion midway through a word
-setopt extended_history       # record timestamp of command in HISTFILE
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_reduce_blanks     # Trim blanks
-setopt hist_verify            # show command with history expansion to user before running it
-setopt inc_append_history     # add commands to HISTFILE in order of execution
-setopt share_history          # share command history data
 setopt interactivecomments    # Treat '#' on cli as a comment
 setopt chase_links            # Resolve symlinks
-autoload bashcompinit
-bashcompinit
+setopt autocd                 # change directory just by typing its name
+setopt magicequalsubst        # enable filename expansion for arguments of the form ‘anything=expression’
+setopt nonomatch              # hide error message if there is no match for the pattern
+setopt notify                 # report the status of background jobs immediately
+setopt numericglobsort        # sort filenames numerically when it makes sense
 
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P' # configure format of `time` command
+PROMPT_EOL_MARK=""                                # hide EOL sign ('%')
+WORDCHARS=${WORDCHARS//\/}                        # don't consider '/' part of word
 
-# History
-export HISTFILE="${HOME}/.zsh_history"
-export HISTSIZE=10000
-export SAVEHIST=${HISTSIZE}
+
 #export TERM="xterm-256color"
 
 export DISABLE_FZF_KEY_BINDINGS="true"
@@ -41,6 +34,4 @@ export MCFLY_FUZZY=2
 export MCFLY_RESULTS_SORT=LAST_RUN
 export MCFLY_DISABLE_MENU=TRUE
 
-znap eval omz-keybind 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/lib/key-bindings.zsh'
-
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'

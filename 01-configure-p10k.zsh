@@ -44,7 +44,7 @@
   # Right prompt on the last prompt line (where you are typing your commands) gets
   # automatically hidden when the input line reaches it. Right prompt above the
   # last prompt line gets hidden if it would overlap with left prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS_1=(
     # =========================[ Line #1 ]=========================
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
@@ -104,6 +104,8 @@
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     time                    # current time
     # =========================[ Line #2 ]=========================
+  )
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS_2=(
     newline                 # \n
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address

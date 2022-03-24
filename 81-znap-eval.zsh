@@ -1,3 +1,3 @@
-[[ -n "${commands[mcfly]}" ]]   && znap eval mcfly 'mcfly init zsh'
-[[ -n "${commands[thefuck]}" ]] && znap eval thefuck 'thefuck --alias'
-[[ -n "${commands[direnv]}" ]]  && znap eval direnv 'direnv hook zsh'
+[[ -n "${commands[mcfly]}" ]]   && znap eval mcfly "${commands[mcfly]} init zsh"
+[[ -n "${commands[thefuck]}" ]] && znap eval thefuck "${commands[thefuck]} --alias"
+[[ -n "${commands[direnv]}" ]]  && znap eval direnv "${commands[direnv]} hook zsh"

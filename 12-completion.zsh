@@ -11,3 +11,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+if [ -n "${commands[aws]}" ] && [ -n "${commands[aws_completer]}" ]; then
+    complete -C "${commands[aws_completer]}" aws
+fi

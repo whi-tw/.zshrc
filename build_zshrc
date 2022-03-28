@@ -6,7 +6,7 @@ echo export INSTALLDIR="${INSTALLDIR}" > "${INSTALLDIR}"/98.0-os-specific.zsh
 tmpfile="$(mktemp)"
 for file in "${INSTALLDIR}"/*.zsh; do
     filename="$(basename ${file})"
-    python "${INSTALLDIR}"/scripts/header.py "${filename}" >> "${tmpfile}"
+    python3 "${INSTALLDIR}"/scripts/header.py "${filename}" >> "${tmpfile}"
     cat "${file}" >> "${tmpfile}"
     echo -e "\n" >> "${tmpfile}"
 done

@@ -5,3 +5,7 @@ znap source jreese/zsh-titles
 znap source hlissner/zsh-autopair
 znap source chrissicool/zsh-256color
 znap source agkozak/zsh-z
+
+znap source ohmyzsh/ohmyzsh plugins/history-substring-search
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down

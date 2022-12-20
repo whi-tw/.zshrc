@@ -15,3 +15,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -n "${commands[aws]}" ] && [ -n "${commands[aws_completer]}" ]; then
     complete -C "${commands[aws_completer]}" aws
 fi
+
+if [ -n "${commands[gds]}" ]; then
+    znap fpath _gds 'gds shell-completion zsh'
+fi

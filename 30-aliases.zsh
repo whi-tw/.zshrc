@@ -1,6 +1,7 @@
 alias rm="rm -v"
 alias cp="cp -v"
 alias mv="mv -v"
+alias rename="rename -v"
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

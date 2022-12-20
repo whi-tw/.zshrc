@@ -15,6 +15,6 @@ elif [[ -e "${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.so
     export SSH_AUTH_SOCK="${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 fi
 
-if [[ -n "${commands[kwallet-query]}" ]]; then
-    export AWS_VAULT_BACKEND="kwallet"
-fi
+# if [[ -n "${commands[kwallet-query]}" ]]; then
+#     export AWS_VAULT_BACKEND="kwallet"
+# fi

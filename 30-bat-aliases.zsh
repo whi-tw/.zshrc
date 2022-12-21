@@ -1,13 +1,14 @@
 alias batjson="bat -l json"
 
 function jqbat() {
-    jq "${@}" | batjson --style=plain #--file-name '`'"$(get_pipe_parent_cmdline) | jq ${@}"'`' 
+    jq "${@}" | batjson --style=plain
 }
-compdef jqbat='jq'
+[[ -n "${_comps[jq]}" ]] && compdef jqbat=jq
 
 alias batyaml="bat -l yaml"
 
 function yqbat() {
     yq "${@}" | batyaml --style=plain
 }
-compdef yqbat='yq'
+
+[[ -n "${_comps[yq]}" ]] && compdef yqbat=yq

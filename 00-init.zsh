@@ -1,8 +1,8 @@
-if [[ -z "$ZSH_CACHE_DIR" ]]; then
+if [[ -z "${ZSH_CACHE_DIR}" ]]; then
     if [[ -n "${XDG_CACHE_HOME}" ]]; then
-        ZSH_CACHE_DIR="${XDG_CACHE_HOME}/.zsh"
+        export ZSH_CACHE_DIR="${XDG_CACHE_HOME}/.zsh"
     else
-        ZSH_CACHE_DIR="${HOME}/.cache/.zsh"
+        export ZSH_CACHE_DIR="${HOME}/.cache/.zsh"
     fi
 fi
 

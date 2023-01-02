@@ -16,3 +16,29 @@ repos:
     rev: 22.12.0
     hooks:
       - id: black
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: "v0.991"
+    hooks:
+      - id: mypy
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+        exclude: |
+          (?x)^(
+              02-prompt.zsh|
+              13-completion-functions.zsh
+          )$
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: check-yaml
+      - id: destroyed-symlinks
+      - id: forbid-submodules
+      - id: mixed-line-ending

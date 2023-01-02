@@ -2,12 +2,6 @@
 import functools
 import sys
 from pathlib import Path
-from typing import List
-
-# import debugpy
-
-# debugpy.listen(5678)
-# debugpy.wait_for_client()
 
 
 class NotAFileError(OSError):
@@ -23,8 +17,8 @@ def compare_filenames(p1: Path, p2: Path) -> int:
         return 0
 
 
-def sort_files(files: List[Path]) -> List[Path]:
-    not_found: List[Path] = [p for p in files if not p.is_file()]
+def sort_files(files: list[Path]) -> list[Path]:
+    not_found = [p for p in files if not p.is_file()]
 
     if not_found:
         raise NotAFileError(f"Not files: {not_found}")
@@ -33,7 +27,7 @@ def sort_files(files: List[Path]) -> List[Path]:
 
 
 if __name__ == "__main__":
-    files: List[Path] = [Path(p) for p in sys.argv[1:]]
-    sorted = sort_files(files=files)
+    files: list[Path] = [Path(p) for p in sys.argv[1:]]
+    s = sort_files(files=files)
 
-    print(" ".join([str(p) for p in sorted]))
+    print(" ".join([str(p) for p in s]))

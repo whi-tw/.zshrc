@@ -1,5 +1,5 @@
 OS := $(shell scripts/detect-os.zsh)
-OS_SPECIFIC_FILES := $(wildcard ./os-specific/$(OS)/*)
+OS_SPECIFIC_FILES := $(wildcard ./os-specific/$(OS)/*.zsh)
 FILES := $(wildcard ./*.zsh)
 INPUT_FILES := $(shell scripts/sort_files.py $(FILES) $(OS_SPECIFIC_FILES))
 

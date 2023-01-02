@@ -27,3 +27,6 @@ alias sysu="systemctl --user"
 alias glow="glow -p"
 
 alias t="todo.sh"
+
+# Aliases for 1Password cli plugins
+[[ -f "${HOME}/.op/plugins.sh" ]] && source "${HOME}/.op/plugins.sh"

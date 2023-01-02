@@ -3,7 +3,8 @@
     "editor.formatOnSave": true
   },
   "files.exclude": {
-    "**.zsh.zwc": true
+    "**.zsh.zwc": true,
+    ".zshrc": true
   },
   "editor.formatOnSave": false,
   "shellcheck.enable": false,

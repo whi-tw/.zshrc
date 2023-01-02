@@ -3,3 +3,7 @@ repos:
     rev: v2.2.0
     hooks:
       - id: doctoc
+  - repo: https://github.com/zricethezav/gitleaks
+    rev: v8.15.2
+    hooks:
+      - id: gitleaks

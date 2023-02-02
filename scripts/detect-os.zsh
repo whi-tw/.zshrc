@@ -17,9 +17,21 @@ print_and_exit() {
     print_and_exit "mac"
 }
 
-# Ubuntu ('ubuntu')
+# Debian-based OS
 [[ -f '/etc/os-release' ]] && {
+
+    # Raspbian ('raspbian')
+    [[ -f '/usr/bin/raspi-config' ]] && {
+        print_and_exit "raspbian"
+    }
+
+    # Ubuntu ('ubuntu')
     grep -q "Ubuntu" /etc/os-release && {
         print_and_exit "ubuntu"
+    }
+
+    # Debian ('debian')
+    grep -q 'Debian' /etc/os-release && {
+        print_and_exit "debian"
     }
 }

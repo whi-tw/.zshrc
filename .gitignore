@@ -1,6 +1,5 @@
 *.zsh.zwc
-40-*
-50-*
+[4-5][0-9]-*
 98.0-os-specific.zsh
 .zshrc
 super-linter.log

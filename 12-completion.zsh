@@ -15,3 +15,10 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -n "${commands[aws]}" ] && [ -n "${commands[aws_completer]}" ]; then
     complete -C "${commands[aws_completer]}" aws
 fi
+
+function _bind_completion_keys() {
+    bindkey "^xh" _complete_help # displays information about context names, tags, and completion functions used when completing at the current cursor position
+    echo "Ctrl+x h bound to _complete_help: displays information about context names, tags, and completion functions used when completing at the current cursor position"
+    bindkey "^x?" _complete_debug # performs ordinary completion, but captures in a temporary file a trace of the shell commands executed by the completion system
+    echo "Ctrl+x ? bound to _complete_debug: performs ordinary completion, but captures in a temporary file a trace of the shell commands executed by the completion system"
+}

@@ -11,9 +11,13 @@ OUTPUT_FILE := $(HOME)/.zshrc
 build: $(OUTPUT_FILE)
 
 .zshrc: $(INPUT_FILES) $(NON_ZSHRC_FILES)
-	@echo "-- Building.zshrc for $(OS)"
+	@echo "-- Building .zshrc for $(OS)"
 	@scripts/build_zshrc.zsh $(INPUT_FILES) > .zshrc
 
 $(OUTPUT_FILE): .zshrc
 	@echo "-- Copying .zshrc to $(OUTPUT_FILE)"
 	@install -bm400 .zshrc $(OUTPUT_FILE)
+
+clean:
+	@echo "-- Cleaning up .zshrc (not $(OUTPUT_FILE)!)"
+	@rm -f .zshrc

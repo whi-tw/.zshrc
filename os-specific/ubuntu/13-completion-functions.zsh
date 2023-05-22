@@ -1,4 +1,4 @@
-[[ -n "${commands[microk8s]}" ]] && {
+__command_is_present microk8s && {
     function _microk8s_enable_get_command_list() {
         microk8s status --format short | grep ": disabled$" | sed 's/: disabled$//g'
     }
@@ -43,13 +43,13 @@
     }
     compdef _microk8s microk8s
 
-    [[ -n "${commands[microk8s.kubectl]}" ]] && {
+    __command_is_present microk8s.kubectl && {
         znap fpath _kubectl 'microk8s.kubectl completion zsh'
         compdef microk8s.kubectl=kubectl
         alias kubectl="microk8s.kubectl"
     }
 
-    [[ -n "${commands[microk8s.helm]}" ]] && {
+    __command_is_present microk8s.helm && {
         znap fpath _helm 'microk8s.helm completion zsh'
         compdef microk8s.helm=helm
         compdef microk8s.helm3=helm

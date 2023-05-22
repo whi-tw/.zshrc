@@ -1,11 +1,10 @@
-if [[ -n "${commands[nano]}" ]] && [[ "${TERM_PROGRAM}" != "vscode" ]]; then
-    export VISUAL="${commands[nano]}"
-    export EDITOR="${VISUAL}"
-fi
+__command_is_present nano && {
+    export VISUAL="${VISUAL:-nano}"
+    export EDITOR="${EDITOR:-${VISUAL}}"
+}
 
-if [[ -n "${commands[ssh-askpass]}" ]]; then
-    export SSH_ASKPASS="${commands[ssh-askpass]}"
-fi
+__command_is_present ssh-askpass && export SSH_ASKPASS="ssh-askpass"
+
 
 if [[ -e "${XDG_RUNTIME_DIR}/ssh-agent.socket" ]]; then
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
@@ -15,6 +14,4 @@ elif [[ -e "${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.so
     export SSH_AUTH_SOCK="${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 fi
 
-[[ -n "${commands[bat]}" ]] && {
-    export PAGER="bat --style=plain"
-}
+__command_is_present bat && export PAGER="bat --style=plain"

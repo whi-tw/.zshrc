@@ -12,9 +12,7 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-if [ -n "${commands[aws]}" ] && [ -n "${commands[aws_completer]}" ]; then
-    complete -C "${commands[aws_completer]}" aws
-fi
+__command_is_present aws aws_completer && complete -C aws_completer aws
 
 function _bind_completion_keys() {
     bindkey "^xh" _complete_help # displays information about context names, tags, and completion functions used when completing at the current cursor position

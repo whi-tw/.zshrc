@@ -7,5 +7,14 @@
     ".zshrc": true
   },
   "shellcheck.enable": false,
-  "workspaceKeybindings.runf13task.enabled": true
+  "workspaceKeybindings.runf13task.enabled": true,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.zsh$",
+        "cmd": "make -C ${workspaceFolder} build",
+        "isAsync": false
+      }
+    ]
+  }
 }

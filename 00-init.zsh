@@ -8,8 +8,10 @@ fi
 
 [[ -d "${ZSH_CACHE_DIR}" ]] || mkdir -p "${ZSH_CACHE_DIR}"
 
-[[ -f ~/.znap/zsh-snap/znap.zsh ]] || {
+[[ -r ~/.znap/zsh-snap/znap.zsh ]] || {
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/.znap/zsh-snap
 }
 source ~/.znap/zsh-snap/znap.zsh
+
+fpath=(~/.znap/zsh-snap/functions $fpath) # Workaround for https://github.com/marlonrichert/zsh-snap/issues/249

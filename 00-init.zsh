@@ -13,5 +13,3 @@ fi
         https://github.com/marlonrichert/zsh-snap.git ~/.znap/zsh-snap
 }
 source ~/.znap/zsh-snap/znap.zsh
-
-fpath=(~/.znap/zsh-snap/functions $fpath) # Workaround for https://github.com/marlonrichert/zsh-snap/issues/249

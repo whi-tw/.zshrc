@@ -15,3 +15,5 @@ elif [[ -e "${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.so
 fi
 
 __command_is_present bat && export PAGER="bat --style=plain"
+
+export RYE_HOME="${HOME}/.rye"

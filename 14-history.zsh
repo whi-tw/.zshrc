@@ -1,5 +1,5 @@
 export HISTFILE="${HOME}/.zsh_history"
-export HISTSIZE=10000
+export HISTSIZE=100000
 export SAVEHIST=${HISTSIZE}
 
 setopt extended_history       # record timestamp of command in HISTFILE

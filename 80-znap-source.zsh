@@ -11,3 +11,7 @@ znap source marlonrichert/zsh-hist
 znap source ohmyzsh/ohmyzsh plugins/history-substring-search
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
+
+# __command_is_present terraform && {
+#     znap source ohmyzsh/ohmyzsh plugins/terraform/_terraform
+# }

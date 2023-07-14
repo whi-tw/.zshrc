@@ -12,6 +12,11 @@ print_and_exit() {
     print_and_exit "kali"
 }
 
+# Parrot ('parrot')
+[[ -d '/usr/share/parrot-defaults' ]] && {
+	print_and_exit "parrot"
+}
+
 # macOS ('mac')
 [[ -d '/Library/Apple' ]] && {
     print_and_exit "mac"

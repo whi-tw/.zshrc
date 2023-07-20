@@ -14,3 +14,7 @@ fi
 __command_is_present bat && export PAGER="bat --style=plain"
 
 export RYE_HOME="${HOME}/.rye"
+
+echo "$PATH" | grep "${HOME}/.local/bin" &> /dev/null || {
+    export PATH="${HOME}/.local/bin:${PATH}"
+}

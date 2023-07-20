@@ -3,7 +3,7 @@ function prompt_htb_box() {
     local boxname
     local boxip
     case $PWD/ in
-    ${HOME}/htb/boxes/*)
+    */htb/boxes/*)
         boxname="$(echo "$PWD" | sed "s@${HOME}/htb/boxes/@@" | cut -d'/' -f1)"
         test -z "${boxname}" && return
         segment_content="${boxname}"

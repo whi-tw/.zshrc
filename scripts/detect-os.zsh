@@ -13,7 +13,7 @@ print_and_exit() {
 }
 
 # Parrot ('parrot')
-[[ -d '/usr/share/parrot-defaults' ]] && {
+[[ -d '/usr/share/parrot-menu' ]] && {
 	print_and_exit "parrot"
 }
 

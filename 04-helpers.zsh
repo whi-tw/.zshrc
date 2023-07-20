@@ -12,7 +12,10 @@ function __command_is_present() {
 }
 
 function __command_is_absent() {
-    __command_is_present "${@}" && return 1
+    if __command_is_present "${@}"
+    then
+        return 1
+    fi
 }
 
 function __docker_is_present() {

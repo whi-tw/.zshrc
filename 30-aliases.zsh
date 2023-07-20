@@ -23,13 +23,15 @@ alias mtr='mtr --curses'
 
 alias delim="seq  -f "=" -s '' $(tput cols)"
 
-alias sysu="systemctl --user"
+alias sysu="systemctl --user" ##TODO
 
 __command_is_present glow && alias glow="glow -p"
 
-alias t="todo.sh"
+__command_is_present todo.sh && alias t="todo.sh"
 
 # Aliases for 1Password cli plugins
 [[ -f "${HOME}/.op/plugins.sh" ]] && source "${HOME}/.op/plugins.sh"
 
 __command_is_present code-insiders && alias code="code-insiders"
+
+__command_is_absent bosh && __command_is_present bosh-cli && alias bosh="bosh-cli"

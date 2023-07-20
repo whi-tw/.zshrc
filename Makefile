@@ -6,6 +6,7 @@ INPUT_FILES := $(shell scripts/sort_files.py $(FILES) $(OS_SPECIFIC_FILES))
 NON_ZSHRC_FILES := Makefile $(wildcard ./scripts/*)
 
 OUTPUT_FILE := $(HOME)/.zshrc
+export SOURCE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 .PHONY: build
 build: $(OUTPUT_FILE)

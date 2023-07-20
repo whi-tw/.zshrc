@@ -1,15 +1,18 @@
 #!/usr/bin/env zsh
 set -euo pipefail
 
-first="true"
-for file in "${@}"; do
+files=("${@}")
+
+echo "export __ZSHRC_SOURCE_DIR=${SOURCE_DIR}\n"
+
+for ((i=0; i<${#files[@]}; i++)); do
+    file="${files[i+1]}"
     [[ "$(cat "${file}" | grep -v '^# Description:' | wc -l | tr -d ' ')" -eq 0 ]] && continue
     description="$(grep '^# Description:' "${file}" | sed 's/# Description: //' || true)"
-    if [[ "${first}" == "true" ]]; then
-        first="false"
-    else
+    if [[ "$i" -ne 0 ]]; then
+        # add a newline between files
         echo
-    fi
+    fi    
     echo "##### ${file} #####"
     if [[ -n "${description}" ]]; then
         echo "# ${description}"

@@ -17,4 +17,4 @@ function prompt_htb_box() {
         ;;
     esac
 }
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS_1+=(htb_box)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(htb_box)

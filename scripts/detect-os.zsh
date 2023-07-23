@@ -40,3 +40,8 @@ print_and_exit() {
         print_and_exit "debian"
     }
 }
+
+# Manjaro ('manjaro')
+[[ -f '/etc/manjaro-release' ]] && {
+    print_and_exit "manjaro"
+}

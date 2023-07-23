@@ -11,7 +11,7 @@ export SOURCE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 .PHONY: build
 build: $(OUTPUT_FILE)
 
-.zshrc: $(INPUT_FILES) $(NON_ZSHRC_FILES)
+.zshrc: .FORCE
 	@echo "-- Building .zshrc for $(OS)"
 	@scripts/build_zshrc.zsh $(INPUT_FILES) > .zshrc
 
@@ -22,3 +22,5 @@ $(OUTPUT_FILE): .zshrc
 clean:
 	@echo "-- Cleaning up .zshrc (not $(OUTPUT_FILE)!)"
 	@rm -f .zshrc
+
+.FORCE:

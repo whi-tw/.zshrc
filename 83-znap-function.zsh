@@ -1,5 +1,5 @@
 __command_is_present poetry && {
-    znap function _poetry poetry 'eval "$(poetry completions zsh --alias poetry)"'
+    znap function _poetry 'eval "$(poetry completions zsh --alias poetry)"'
     compdef _poetry poetry
 }
 

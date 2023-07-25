@@ -17,7 +17,7 @@ build: $(OUTPUT_FILE)
 
 $(OUTPUT_FILE): .zshrc
 	@echo "-- Copying .zshrc to $(OUTPUT_FILE)"
-	@install -bm400 .zshrc $(OUTPUT_FILE)
+	@install -m400 .zshrc $(OUTPUT_FILE)
 
 clean:
 	@echo "-- Cleaning up .zshrc (not $(OUTPUT_FILE)!)"

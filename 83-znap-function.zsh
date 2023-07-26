@@ -4,7 +4,7 @@ __command_is_present poetry && {
 }
 
 __command_is_present rye && {
-    znap function _rye rye 'eval "$(rye self completion -s zsh)"'
+    znap function _rye 'eval "$(rye self completion -s zsh)"'
     compdef _rye rye
 }
 

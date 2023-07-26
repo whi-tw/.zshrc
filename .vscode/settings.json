@@ -3,8 +3,7 @@
     "editor.formatOnSave": false
   },
   "files.exclude": {
-    "**.zsh.zwc": true,
-    ".zshrc": true
+    "**.zsh.zwc": true
   },
   "shellcheck.enable": false,
   "workspaceKeybindings.runf13task.enabled": true,
@@ -17,6 +16,13 @@
   //     }
   //   ]
   // },
-  "python.linting.mypyEnabled": true,
-  "python.linting.enabled": true
+  "python.linting.mypyEnabled": false,
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "files.readonlyInclude": {
+    "build/.zsh*": true
+  },
+  "search.exclude": {
+    "build/**": true
+  }
 }

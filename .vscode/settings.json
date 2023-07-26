@@ -8,15 +8,15 @@
   },
   "shellcheck.enable": false,
   "workspaceKeybindings.runf13task.enabled": true,
-  "emeraldwalk.runonsave": {
-    "commands": [
-      {
-        "match": "\\.zsh$",
-        "cmd": "make -C ${workspaceFolder} build",
-        "isAsync": false
-      }
-    ]
-  },
+  // "emeraldwalk.runonsave": {
+  //   "commands": [
+  //     {
+  //       "match": "\\.zsh$",
+  //       "cmd": "make -C ${workspaceFolder} build",
+  //       "isAsync": false
+  //     }
+  //   ]
+  // },
   "python.linting.mypyEnabled": true,
   "python.linting.enabled": true
 }

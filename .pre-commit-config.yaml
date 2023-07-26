@@ -24,11 +24,6 @@ repos:
     rev: v4.4.0
     hooks:
       - id: end-of-file-fixer
-        exclude: |
-          (?x)^(
-              02-prompt.zsh|
-              13-completion-functions.zsh
-          )$
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
       - id: check-added-large-files

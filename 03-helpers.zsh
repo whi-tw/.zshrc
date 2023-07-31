@@ -6,7 +6,7 @@
 function __command_is_present() {
     local _cmds=("${@}")
     for _cmd in "${_cmds[@]}"; do
-        test -n "${commands[${_cmd}]}" || return 1
+        (( ${+commands[${_cmd}]} )) || return 1
     done
     return 0
 }

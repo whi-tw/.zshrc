@@ -1,0 +1,1 @@
+znap prompt sindresorhus/pure

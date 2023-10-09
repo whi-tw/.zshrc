@@ -25,4 +25,15 @@ def sort_files(input_files: list[Path]) -> list[Path]:
 
 
 if __name__ == "__main__":
-    print(" ".join([str(p) for p in sort_files([Path(p) for p in sys.argv[1:]])]))
+    sorted_files = [str(p) for p in sort_files([Path(p) for p in sys.argv[1:]])]
+    seen = {}
+    duplicates = []
+    for i, f in enumerate(sorted_files):
+        path = Path(f)
+        if path.stem in seen:
+            duplicates.append(seen[path.stem])
+        seen[path.stem] = i
+    if duplicates:
+        for i in duplicates:
+            sorted_files.pop(i)
+    print(" ".join(sorted_files))

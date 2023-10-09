@@ -21,8 +21,6 @@ alias lt='ls --tree'
 
 alias mtr='mtr --curses'
 
-alias delim="seq  -f "=" -s '' $(tput cols)"
-
 alias sysu="systemctl --user" ##TODO
 
 __command_is_present glow && alias glow="glow -p"

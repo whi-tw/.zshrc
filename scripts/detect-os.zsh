@@ -45,3 +45,8 @@ print_and_exit() {
 [[ -f '/etc/manjaro-release' ]] && {
     print_and_exit "manjaro"
 }
+
+# Ish (ios) ('ish')
+[[ "$(uname -r)" =~ -ish$ ]] && {
+    print_and_exit "ish"
+}

@@ -1,4 +1,4 @@
-ZSH_AUTOSUGGEST_STRATEGY=( history completion )
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 znap source zsh-users/zsh-autosuggestions
 # znap source marlonrichert/zsh-autocomplete ## This is always a mistake. stop it.
 znap source jreese/zsh-titles

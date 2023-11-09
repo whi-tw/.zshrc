@@ -1,12 +1,8 @@
 # Description: Additions to $PATH
 
 # Add krew's bin directory to $PATH (kubectl plugins)
-__command_is_present kubectl-krew && [[ -d "${HOME}/.krew/bin" ]] && {
-    export PATH="${HOME}/.krew/bin:${PATH}"
-}
+__command_is_present kubectl-krew && [[ -d "${HOME}/.krew/bin" ]] &&
+    export path=("${HOME}/.krew/bin" ${path})
 
-# # source rye's env if it's present
-
-# [[ -r "${RYE_HOME}/env" ]] && {
-#     source "${RYE_HOME}/env"
-# }
+# Add Go's bin directory to $PATH
+[[ -d "${HOME}/go/bin" ]] && export path=("${HOME}/go/bin" ${path})

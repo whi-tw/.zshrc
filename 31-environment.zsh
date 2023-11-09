@@ -5,9 +5,7 @@ __command_is_present nano && {
 
 __command_is_present ssh-askpass && export SSH_ASKPASS="ssh-askpass"
 
-
-if [[ -S "${XDG_RUNTIME_DIR}/ssh-agent.socket" ]]
-then
+if [[ -S "${XDG_RUNTIME_DIR}/ssh-agent.socket" ]]; then
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 fi
 
@@ -15,6 +13,4 @@ __command_is_present bat && export PAGER="bat --style=plain"
 
 export RYE_HOME="${HOME}/.rye"
 
-echo "$PATH" | grep "${HOME}/.local/bin" &> /dev/null || {
-    export PATH="${HOME}/.local/bin:${PATH}"
-}
+export path=("${HOME}/.local/bin" ${path})

@@ -6,3 +6,5 @@ __command_is_present kubectl-krew && [[ -d "${HOME}/.krew/bin" ]] &&
 
 # Add Go's bin directory to $PATH
 [[ -d "${HOME}/go/bin" ]] && export path=("${HOME}/go/bin" ${path})
+
+[[ -d "${HOME}/.nix-profile/bin" ]] && export path=("${HOME}/.nix-profile/bin" ${path})

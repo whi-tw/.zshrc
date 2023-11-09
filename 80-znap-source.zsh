@@ -15,3 +15,7 @@ bindkey "^[[B" history-substring-search-down
 # __command_is_present terraform && {
 #     znap source ohmyzsh/ohmyzsh plugins/terraform/_terraform
 # }
+
+__command_is_present nix && {
+    znap source chisui/zsh-nix-shell
+}

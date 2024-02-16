@@ -4,7 +4,7 @@ znap source zsh-users/zsh-autosuggestions
 znap source jreese/zsh-titles
 znap source hlissner/zsh-autopair
 znap source chrissicool/zsh-256color
-znap source agkozak/zsh-z
+__command_is_absent zoxide && znap source agkozak/zsh-z
 znap source zsh-users/zsh-syntax-highlighting
 znap source marlonrichert/zsh-hist
 

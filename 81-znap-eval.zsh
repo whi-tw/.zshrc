@@ -1,4 +1,4 @@
-__command_is_present mcfly   && znap eval mcfly 'mcfly init zsh'
-__command_is_present thefuck && znap eval thefuck 'thefuck --alias'
-__command_is_present direnv  && znap eval direnv_hook 'direnv hook zsh'
-__command_is_present zoxide  && znap eval zoxide 'zoxide init zsh'
+(( $+commands[mcfly] ))   && znap eval mcfly 'mcfly init zsh'
+(( $+commands[thefuck] )) && znap eval thefuck 'thefuck --alias'
+(( $+commands[direnv] ))  && znap eval direnv_hook 'direnv hook zsh'
+(( $+commands[zoxide] ))  && znap eval zoxide 'zoxide init zsh'

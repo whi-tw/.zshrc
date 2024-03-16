@@ -1,9 +1,9 @@
-__command_is_present poetry && {
+(( $+commands[poetry] )) && {
     znap function _poetry 'eval "$(poetry completions zsh --alias poetry)"'
     compdef _poetry poetry
 }
 
-__command_is_present rye && {
+(( $+commands[rye] )) && {
     znap function _rye 'eval "$(rye self completion -s zsh)"'
     compdef _rye rye
 }

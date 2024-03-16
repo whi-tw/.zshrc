@@ -1,4 +1,4 @@
-__command_is_present pass && {
+(( $+commands[pass] )) && {
     for i in ${HOME}/.*-pass; do
         local source_file="${i}/.load.zsh"
         if [[ -f "${source_file}" ]]; then

@@ -12,7 +12,7 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-__command_is_present aws aws_completer && \
+(( $+commands[aws] )) && (( $+commands[aws_completer] )) && \
     complete -C aws_completer aws
 
 function _bind_completion_keys() {
@@ -22,5 +22,5 @@ function _bind_completion_keys() {
     echo "Ctrl+x ? bound to _complete_debug: performs ordinary completion, but captures in a temporary file a trace of the shell commands executed by the completion system"
 }
 
-__command_is_present terraform && \
+(( $+commands[terraform] )) && \
     complete -o nospace -C /Users/tom.whitwell/.asdf/shims/terraform terraform

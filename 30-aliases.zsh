@@ -7,7 +7,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-if __command_is_present lsd; then
+if (( $+commands[lsd] )); then
     alias ls='lsd'
 else
     alias ls="ls --color"
@@ -23,13 +23,13 @@ alias mtr='mtr --curses'
 
 alias sysu="systemctl --user" ##TODO
 
-__command_is_present glow && alias glow="glow -p"
+(( $+commands[glow] )) && alias glow="glow -p"
 
-__command_is_present todo.sh && alias t="todo.sh"
+(( $+commands[todo.sh] )) && alias t="todo.sh"
 
 # Aliases for 1Password cli plugins
 [[ -f "${HOME}/.op/plugins.sh" ]] && source "${HOME}/.op/plugins.sh"
 
-__command_is_present code-insiders && alias code="code-insiders"
+(( $+commands[code-insiders] )) && alias code="code-insiders"
 
-__command_is_absent bosh && __command_is_present bosh-cli && alias bosh="bosh-cli"
+(( ! $+commands[bosh] )) && (( $+commands[bosh-cli] )) && alias bosh="bosh-cli"

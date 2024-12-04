@@ -8,3 +8,5 @@
 [[ -d "${HOME}/go/bin" ]] && export path=("${HOME}/go/bin" ${path})
 
 [[ -d "${HOME}/.nix-profile/bin" ]] && export path=("${HOME}/.nix-profile/bin" ${path})
+
+[[ -d "${HOME}/.bun/bin" ]] && export path=("${HOME}/.bun/bin" ${path})

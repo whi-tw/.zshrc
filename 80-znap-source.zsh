@@ -8,7 +8,12 @@ znap source chrissicool/zsh-256color
 znap source zsh-users/zsh-syntax-highlighting
 znap source marlonrichert/zsh-hist
 
-znap source ohmyzsh/ohmyzsh plugins/history-substring-search
+znap source ohmyzsh/ohmyzsh \
+    plugins/command-not-found \
+    plugins/history-substring-search
+
+# for command-not-found on mac: https://github.com/Homebrew/homebrew-command-not-found
+
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 

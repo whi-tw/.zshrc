@@ -24,3 +24,7 @@ function _bind_completion_keys() {
 
 (( $+commands[terraform] )) && \
     complete -o nospace -C /Users/tom.whitwell/.asdf/shims/terraform terraform
+
+test -d "${XDG_CONFIG_HOME}/granted/zsh_autocomplete" && {
+    fpath=("${XDG_CONFIG_HOME}/granted/zsh_autocomplete"/* $fpath)
+}

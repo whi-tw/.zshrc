@@ -33,3 +33,8 @@ alias sysu="systemctl --user" ##TODO
 (( $+commands[code-insiders] )) && alias code="code-insiders"
 
 (( ! $+commands[bosh] )) && (( $+commands[bosh-cli] )) && alias bosh="bosh-cli"
+
+(( $+commands[assume] )) && {
+    alias assume="source ${commands[assume]}"
+    alias awsconsole="assume --active-role"
+}

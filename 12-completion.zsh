@@ -22,9 +22,6 @@ function _bind_completion_keys() {
     echo "Ctrl+x ? bound to _complete_debug: performs ordinary completion, but captures in a temporary file a trace of the shell commands executed by the completion system"
 }
 
-(( $+commands[terraform] )) && \
-    complete -o nospace -C /Users/tom.whitwell/.asdf/shims/terraform terraform
-
 test -d "${XDG_CONFIG_HOME}/granted/zsh_autocomplete" && {
     fpath=("${XDG_CONFIG_HOME}/granted/zsh_autocomplete"/* $fpath)
 }

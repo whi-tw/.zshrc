@@ -7,7 +7,7 @@
 test -n "${SSH_CONNECTION}" && \
     typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon ${POWERLEVEL9K_LEFT_PROMPT_ELEMENTS[@]})
 
-typeset -g POWERLEVEL9K_CONFIG_FILE="${__ZSHRC_SOURCE_DIR}/98-configure-p10k.zsh"
+typeset -g POWERLEVEL9K_CONFIG_FILE="${__ZSHRC_SOURCE_DIR}/97-configure-p10k.zsh"
 unset __ZSHRC_SOURCE_DIR
 
 znap source romkatv/powerlevel10k powerlevel10k.zsh-theme

@@ -1,11 +1,3 @@
-# asdf
-
-[[ -f ~/.asdf/asdf.sh ]] || {
-    git clone --branch v0.11.0 -- \
-        https://github.com/asdf-vm/asdf.git ~/.asdf
-}
-source $HOME/.asdf/asdf.sh
-
 function _asdf_update_all_global_latest() {
     asdf plugin update --all
     asdf plugin list | xargs -L1 -I{} asdf install {} latest

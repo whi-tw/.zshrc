@@ -8,9 +8,6 @@
     compdef _rye rye
 }
 
-znap function _jj 'eval "$(jj util completion zsh)"'
-compdef _jj jj
-
 # workaround for 1password-cli squashing completion functions of plugins
 function __my_op_plugin_run() {
     _op_plugin_run

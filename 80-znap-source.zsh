@@ -1,21 +1,19 @@
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-znap source zsh-users/zsh-autosuggestions
-# znap source marlonrichert/zsh-autocomplete ## This is always a mistake. stop it.
-znap source jreese/zsh-titles
-znap source hlissner/zsh-autopair
-znap source chrissicool/zsh-256color
-(( ! $+commands[zoxide] )) && znap source agkozak/zsh-z
-znap source zsh-users/zsh-syntax-highlighting
-znap source marlonrichert/zsh-hist
+zinit wait lucid for \
+        light-mode \
+    jreese/zsh-titles \
+        light-mode \
+    chrissicool/zsh-256color \
+        light-mode \
+    hlissner/zsh-autopair
 
-znap source ohmyzsh/ohmyzsh plugins/history-substring-search
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+zinit for \
+        light-mode \
+        atload'export ZSH_AUTOSUGGEST_STRATEGY=(history completion)' \
+    zsh-users/zsh-autosuggestions \
+        light-mode \
+        atload'bindkey "^[[A" history-substring-search-up' \
+        atload'bindkey "^[[B" history-substring-search-down' \
+        atload'export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1' \
+    zsh-users/zsh-history-substring-search
 
-# (( $+commands[terraform] )) && {
-#     znap source ohmyzsh/ohmyzsh plugins/terraform/_terraform
-# }
-
-(( $+commands[nix] )) && {
-    znap source chisui/zsh-nix-shell
-}
+# zinit light marlonrichert/zsh-autocomplete ## This is always a mistake. stop it.

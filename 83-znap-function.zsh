@@ -1,13 +1,3 @@
-(( $+commands[poetry] )) && {
-    znap function _poetry 'eval "$(poetry completions zsh --alias poetry)"'
-    compdef _poetry poetry
-}
-
-(( $+commands[rye] )) && {
-    znap function _rye 'eval "$(rye self completion -s zsh)"'
-    compdef _rye rye
-}
-
 # workaround for 1password-cli squashing completion functions of plugins
 function __my_op_plugin_run() {
     _op_plugin_run
@@ -28,5 +18,5 @@ function __load_op_completion() {
     sed -E 's/^( +)_op_plugin_run/\1__my_op_plugin_run/' <<<"${completion_function}"
 }
 
-znap function _op op 'eval "$(__load_op_completion)"'
+eval "$(__load_op_completion)"
 compdef _op op

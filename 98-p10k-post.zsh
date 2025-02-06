@@ -10,4 +10,5 @@ test -n "${SSH_CONNECTION}" && \
 typeset -g POWERLEVEL9K_CONFIG_FILE="${__ZSHRC_SOURCE_DIR}/97-configure-p10k.zsh"
 unset __ZSHRC_SOURCE_DIR
 
-znap source romkatv/powerlevel10k powerlevel10k.zsh-theme
+zinit ice depth"1" # git clone depth
+zinit light romkatv/powerlevel10k

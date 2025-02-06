@@ -1,6 +1,7 @@
-znap install \
-    zsh-users/zsh-completions
-
-(( $+commands[nix] )) && {
-    znap install nix-community/nix-zsh-completions
-}
+zi for \
+    light-mode \
+    atload"zicompinit; zicdreplay" \
+    blockf \
+    lucid \
+    wait \
+  zsh-users/zsh-completions

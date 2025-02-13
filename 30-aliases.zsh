@@ -30,7 +30,7 @@ alias sysu="systemctl --user" ##TODO
 # Aliases for 1Password cli plugins
 [[ -f "${HOME}/.op/plugins.sh" ]] && source "${HOME}/.op/plugins.sh"
 
-(( $+commands[code-insiders] )) && alias code="code-insiders"
+#(( $+commands[code-insiders] )) && alias code="code-insiders"
 
 (( ! $+commands[bosh] )) && (( $+commands[bosh-cli] )) && alias bosh="bosh-cli"
 

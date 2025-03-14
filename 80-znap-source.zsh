@@ -6,6 +6,8 @@ zinit wait lucid for \
         light-mode \
     hlissner/zsh-autopair
 
+zinit snippet OMZP::jenv/jenv.plugin.zsh
+
 zinit for \
         light-mode \
         atload'export ZSH_AUTOSUGGEST_STRATEGY=(history completion)' \

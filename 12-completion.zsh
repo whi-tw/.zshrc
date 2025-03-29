@@ -23,3 +23,7 @@ function _bind_completion_keys() {
 test -d "${XDG_CONFIG_HOME}/granted/zsh_autocomplete" && {
     fpath=("${XDG_CONFIG_HOME}/granted/zsh_autocomplete"/* $fpath)
 }
+
+test -d "${HOME}/.docker/completions" && {
+    fpath=("${HOME}/.docker/completions" $fpath)
+}

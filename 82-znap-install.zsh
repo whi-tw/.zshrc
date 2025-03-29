@@ -1,5 +1,4 @@
 zi for \
-    light-mode \
     atload"zicompinit; zicdreplay" \
     blockf \
     lucid \

@@ -6,7 +6,9 @@ zinit wait lucid for \
         light-mode \
     hlissner/zsh-autopair
 
-zinit snippet OMZP::jenv/jenv.plugin.zsh
+# zinit snippet OMZP::jenv/jenv.plugin.zsh
+# zi ice lucid wait
+# zi snippet OMZP::jenv
 
 zinit for \
         light-mode \

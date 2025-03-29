@@ -1,8 +1,11 @@
-function _asdf_update_all_global_latest() {
-    asdf plugin update --all
-    asdf plugin list | xargs -L1 -I{} asdf install {} latest
-    asdf plugin list | xargs -L1 -I{} asdf global {} latest
-}
+zinit as="command" lucid from="gh-r" for \
+    id-as="usage" \
+    atpull="%atclone" \
+    jdx/usage
 
-## Environment variables for various asdf plugins
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true ## Explicitly use go.mod / go.work
+zinit as="command" lucid from="gh-r" for \
+    id-as="mise" mv="mise* -> mise" \
+    atclone="./mise* completion zsh > _mise" \
+    atpull="%atclone" \
+    atload='eval "$(mise activate zsh)"' \
+    jdx/mise

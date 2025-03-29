@@ -1,1 +1,1 @@
-zinit snippet https://iterm2.com/shell_integration/zsh
+# zinit snippet https://iterm2.com/shell_integration/zsh

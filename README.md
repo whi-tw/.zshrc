@@ -20,7 +20,7 @@ This has the benefit of allowing os-specific configuration to be selected at bui
 
 ## Configuration
 
-This uses [zsh-snap][znap] for plugin management, and will setup [asdf][asdf] (via [00-init.zsh](00-init.zsh)).
+This uses [zsh-snap][znap] for plugin management, and will setup [mise][mise] (via [02-tool-management.zsh](02-tool-management.zsh)).
 
 The prompt is [Powerlevel10k][powerlevel10k]
 
@@ -44,7 +44,7 @@ This is done by [sort_files.py][sort-files-script].
 
 Essentially:
 
-- <9: Base requirements (znap, asdf, homebrew config, [things that may write to stdout][powerlevel10k_instant])
+- <9: Base requirements (znap, mise, homebrew config, [things that may write to stdout][powerlevel10k_instant])
 - 9: Powerlevel10k instant prompt
 - 10-19: Low-level stuff (think `zsh` config) lives in the low numbers (so it is read first)
 - 20-29: Misc early-load things
@@ -62,7 +62,7 @@ It's probably mostly right though.
 OS-specific configuration is located at `os-specific/{os}/*.zsh`. The os is identified at build-time via [detect-os.zsh][detect-os-script]. The naming of these files (and therefore the position in the generated `.zshrc`) is the same as those in the root of the repository (although os-specific files will always be placed after generics with the same name (see: [sort_files.py][sort-files-script])).
 
 [znap]: https://github.com/marlonrichert/zsh-snap "zsh-snap"
-[asdf]: https://github.com/asdf-vm/asdf "asdf"
+[mise]: https://mise.jdx.dev/ "mise"
 [powerlevel10k]: https://github.com/romkatv/powerlevel10k "Powerlevel10k"
 [powerlevel10k_instant]: https://github.com/romkatv/powerlevel10k/tree/master#how-do-i-configure-instant-prompt "Powerlevel10k instant prompt"
 [detect-os-script]: scripts/detect-os.zsh "detect-os.zsh"

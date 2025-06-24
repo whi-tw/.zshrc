@@ -4,7 +4,10 @@ zinit wait lucid for \
         light-mode \
     chrissicool/zsh-256color \
         light-mode \
-    hlissner/zsh-autopair
+    hlissner/zsh-autopair \
+        light-mode \
+    agkozak/zhooks
+
 
 # zinit snippet OMZP::jenv/jenv.plugin.zsh
 # zi ice lucid wait

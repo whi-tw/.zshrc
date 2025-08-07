@@ -31,7 +31,7 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=magenta
 ZSH_HIGHLIGHT_STYLES[assign]=none
 ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
-ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
+ZSH_HIGHLIGHT_STYLES[comment]=fg=#7e87a5,bold
 ZSH_HIGHLIGHT_STYLES[named-fd]=none
 ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
 ZSH_HIGHLIGHT_STYLES[arg0]=fg=green

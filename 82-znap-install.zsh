@@ -1,5 +1,5 @@
 zi for \
-    atpull'zinit creinstall -q .' \
+    atload"zicompinit; zicdreplay" \
     blockf \
     lucid \
     wait \

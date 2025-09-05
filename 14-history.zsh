@@ -15,3 +15,8 @@ setopt hist_save_no_dups      # don't save consecutive duplicates
 setopt hist_fcntl_lock        # use fcntl to lock history file for better concurrent access
 
 unsetopt hist_reduce_blanks   #  Don't trim blanks
+
+zinit ice as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
+    atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
+    atpull"%atclone" src"init.zsh"
+zinit light atuinsh/atuin

@@ -8,11 +8,6 @@ zinit wait lucid for \
         light-mode \
     agkozak/zhooks
 
-
-# zinit snippet OMZP::jenv/jenv.plugin.zsh
-# zi ice lucid wait
-# zi snippet OMZP::jenv
-
 zinit for \
         light-mode \
         atload'export ZSH_AUTOSUGGEST_STRATEGY=(history completion)' \

@@ -10,5 +10,8 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
+setopt hist_find_no_dups      # don't show duplicates when searching history
+setopt hist_save_no_dups      # don't save consecutive duplicates
+setopt hist_fcntl_lock        # use fcntl to lock history file for better concurrent access
 
 unsetopt hist_reduce_blanks   #  Don't trim blanks

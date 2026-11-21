@@ -16,7 +16,15 @@ setopt hist_fcntl_lock        # use fcntl to lock history file for better concur
 
 unsetopt hist_reduce_blanks   #  Don't trim blanks
 
-zinit ice as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
+if [[ $OSTYPE == darwin* ]]; then
+  _atuin_pick='atuin-[^s]*-apple-darwin.tar.gz'
+else
+  _atuin_pick='atuin-[^s]*-linux-musl.tar.gz'
+fi
+
+zinit ice as"command" from"gh-r" bpick"$_atuin_pick" \
+    mv"atuin*/atuin -> atuin" \
     atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
     atpull"%atclone" src"init.zsh"
 zinit light atuinsh/atuin
+unset _atuin_pick
